@@ -1,12 +1,17 @@
 header {
-  background: linear-gradient(176deg, #1c1c1c, #08463B);
+
+    background: linear-gradient(176deg, #1c1c1c, #08463B);
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
 }
 
 
-.links{
+.links {
     display: flex;
     gap: 20px;
     align-items: center;
+
 
     a {
         text-decoration: none;
@@ -19,6 +24,12 @@ header {
             color: #36b39a;
         }
     }
+
+}
+
+img {
+    width: 200px;
+    height: 150px;
 }
 
 .switch {
