@@ -26,9 +26,13 @@ section {
     }
 
     a {
-        margin-top: 30px;
         padding: 0 16px;
         border-top: 1px solid #3DCFB6;
+        &:hover {
+            background-color: rgba(61, 207, 182, 0.3);
+            transition: 0.3s;
+            ;
+        }
     }
 }
 
@@ -57,10 +61,47 @@ section {
 }
 
 .project_content {
-    height: 60px;
+    height: 100px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     
+}
+.projects-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+
+.project-preview {
+  flex: 1;
+  width: 500px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #3DCFB6;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, background-image 0.4s ease;
+}
+
+
+.projects_box a:hover ~ .project-preview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.join:hover ~ .project-preview {
+  background-image: url('./assets/img/Join_screen.jpg');
+}
+
+.projects_box .el_pollo_loco:hover ~ .project-preview {
+  background-image: url('./assets/img/El_Pollo_Loco_screen.jpg');
+}
+
+.pokedex:hover ~ .project-preview {
+  background-image: url('./assets/img/Pokedex_screen.jpg');
 }

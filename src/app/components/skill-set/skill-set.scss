@@ -3,10 +3,12 @@ section {
     justify-content: space-around;
     background-color: #1c1c1c;
     color: white;
+    padding: 100px 60px;
     h3 {
         font-family: 'Karla', sans-serif;
         font-size: 28px;
         color: #3DCFB6;
+        margin-bottom: 30px;
     }
 }
 
@@ -21,7 +23,7 @@ section {
     border-radius: 30px;
     width: 520px;
 
-    >h2 {
+    >h1 {
         font-family: 'Fire Code', sans-serif;
         font-size: 64px;
         font-weight: 700;
@@ -66,7 +68,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 72px;
-    padding: 20px;
+    padding: 80px 20px;
     text-align: center;
     img{
         transition: all 0.1s ease-in-out;
