@@ -3,8 +3,6 @@ section {
     justify-content: space-around;
     background-color: #1c1c1c;
     color: white;
-
-    // background: radial-gradient(circle at left center, #00ffff 350px, transparent 1%  );
     h3 {
         font-family: 'Karla', sans-serif;
         font-size: 28px;
@@ -12,9 +10,6 @@ section {
     }
 }
 
-// .skill_container {
-
-// }
 .skill_box {
     display: flex;
     flex-wrap: wrap;
@@ -73,4 +68,10 @@ section {
     gap: 72px;
     padding: 20px;
     text-align: center;
+    img{
+        transition: all 0.1s ease-in-out;
+        &:hover {
+            scale: 1.08;
+        }
+    }
 }
