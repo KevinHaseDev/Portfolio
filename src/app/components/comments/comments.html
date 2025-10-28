@@ -1,1 +1,16 @@
-
+<section>
+    <h2>What my colleagues say about me</h2>
+    <div>
+        @for (text of comments; track $index) {
+        <div class="comment_box">
+            <span>{{ text.comment }}</span>
+            <p>{{ text.name }}</p>
+        </div>
+        }
+    </div>
+    <div>
+        <button><img src="./assets/icons/comments/arrow_back.svg" alt=""></button>
+        <!-- <div> /*Punkte einbauen und mit einer Funktion austauschen beim click*/</div> -->
+        <button><img src="./assets/icons/comments/arrow_forward.svg" alt=""></button>
+    </div>
+</section>
