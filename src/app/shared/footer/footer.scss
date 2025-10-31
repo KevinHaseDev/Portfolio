@@ -1,0 +1,76 @@
+.footer {
+    background: #1c1c1c;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    margin: 0 auto;
+  }
+
+  .footer-left {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'krala', sans-serif;
+    gap: 3px;   
+  }
+
+  .logo {
+    width: 150px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .role,
+  .location {
+    font-size: 16px;
+    color: #94A3B8; /* muted */
+  }
+
+  .footer-center {
+    text-align: center;
+    color: rgba(61, 207, 182, 1); 
+    font-size: 16px;
+    font-family: 'Fira Code', monospace;
+    white-space: nowrap;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 16px;
+    font-family: 'krala', sans-serif;
+    flex-wrap: wrap;
+  }
+
+  .footer-right a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .footer-right a:hover {
+    color: #3DCFB6;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Responsiv: bei kleinen Bildschirmen vertikal anordnen */
+  @media (max-width: 820px) {
+    .footer {
+      flex-direction: column;
+      text-align: left;
+      align-items: flex-start;
+    }
+    .footer-center {
+      text-align: left;
+      order: 3;
+      margin-top: 0.5rem;
+    }
+    .footer-right {
+      order: 2;
+      justify-content: flex-start;
+    }
+  }
