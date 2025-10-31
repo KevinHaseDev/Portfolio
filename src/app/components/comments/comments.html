@@ -1,13 +1,17 @@
 <section>
     <h2>What my colleagues say about me</h2>
-    <div>
+    <div class="comments_container">
+        
         @for (text of comments; track $index) {
         <div class="comment_box">
-            <span>{{ text.comment }}</span>
+            <span class="comment_text">{{ text.comment }}</span>
+            <div class="comment_box_underline">
             <div class="seperator"></div>
-            <p>{{ text.name }}</p>
+            <span class="comment_name">{{ text.name }}</span>
+            </div>
         </div>
         }
+        
     </div>
     <div>
         <button><img src="./assets/icons/comments/arrow_back.svg" alt=""></button>
