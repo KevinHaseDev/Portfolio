@@ -16,17 +16,65 @@ section {
 
 .contact-text {
     flex: 1;
+    width: 700px;
+
+    h2 {
+        font-size: 24px;
+        font-family: 'Karla', sans-serif;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #00bfa6;
+    }
+
+    h3 {
+        font-size: 64px;
+        font-family: 'Fire code', monospace;
+        font-weight: 700;
+        color: #00bfa6;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-size: 24px;
+        font-family: 'Fire code', monospace;
+        font-weight: 700;
+        color: #00bfa6;
+        margin-bottom: 20px;
+    }
+
+    span {
+        color: #00bfa6;
+    }
 }
 
-.contact-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.label_text {
+    font-family: 'Fire code', monospace;
+    font-weight: 700;
+    font-size: 24px;
     color: #00bfa6;
+    padding-left: 40px;
 }
 
-.contact-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+input {
+    margin-left: 30px;
+}
+
+textarea {
+    margin-left: 30px;
+
+}
+
+.seperator {
+    height: 1px;
+    width: 600px;
+    background-color: #00bfa6;
+}
+
+form {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-form {
@@ -58,7 +106,11 @@ section {
 .checkbox {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin: 40px 0;
+
+    span {
+        color: #00bfa6;
+    }
 }
 
 .checkbox input {
@@ -94,17 +146,21 @@ section {
     border: solid #00bfa6;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
+
+
 }
 
 button {
-    background: #00bfa6;
-    color: #0f0f0f;
-    border: none;
+    background-color: #1c1c1c;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 12px;
-    border-radius: 5px;
-    font-size: 1rem;
+    width: 140px;
+    border-radius: 100px;
+    font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease;
+
 }
 
 button:hover {
