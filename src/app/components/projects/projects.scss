@@ -28,19 +28,40 @@ section {
     a {
         padding: 0 16px;
         border-top: 1px solid #3DCFB6;
+
+        img {
+            display: none;
+        }
+
         &:hover {
             background-color: rgba(61, 207, 182, 0.3);
             transition: 0.3s;
-            ;
+            img {
+                display: inline;
+            }
         }
     }
+}
+
+.projects_section {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 40px;
 }
 
 .projects_box {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 800px;
+}
 
+.project_content {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -48,6 +69,7 @@ section {
     font-family: 'Fire Code', sans-serif;
     font-size: 24px;
     font-weight: 700;
+
 }
 
 .project_language {
@@ -60,48 +82,41 @@ section {
     border-bottom: 1px solid #3DCFB6;
 }
 
-.project_content {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.project_preview {
+    position: absolute;
+    top: 0;
+    right: -550px;
+    width: 400px;
+    height: 250px;
+    border-radius: 30px;
     
-}
-.projects-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 60px;
-}
-
-
-.project-preview {
-  flex: 1;
-  width: 500px;
-  height: 350px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 1px solid #3DCFB6;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease, background-image 0.4s ease;
+    background-position: -40px -30px, center;
+    background-size: contain, contain;
+    background-repeat: no-repeat, no-repeat;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease, background-image 0.4s ease;
+    z-index: 10;
+    overflow: visible;
 }
 
-
-.projects_box a:hover ~ .project-preview {
-  opacity: 1;
-  transform: translateY(0);
+.join:hover~.project_preview {
+    background-image: url('/assets/img/projects/join.svg'),
+    url('/assets/img/projects/projects_background.svg');
+    opacity: 1;
+    transform: translateY(0);
 }
 
+.el_pollo_loco:hover~.project_preview {
+    background-image: url('/assets/img/projects/el_pollo_loco.svg'),
+    url('/assets/img/projects/projects_background.svg');
+    opacity: 1;
+    transform: translateY(0);
+}
 
-// .join:hover ~ .project-preview {
-//   background-image: url('./assets/img/Join_screen.jpg');
-// }
-
-// .projects_box .el_pollo_loco:hover ~ .project-preview {
-//   background-image: url('./assets/img/El_Pollo_Loco_screen.jpg');
-// }
-
-// .pokedex:hover ~ .project-preview {
-//   background-image: url('./assets/img/Pokedex_screen.jpg');
-// }
+.pokedex:hover~.project_preview {
+    background-image: url('/assets/img/projects/Pokedex_screen.jpg'),
+    url('/assets/img/projects/projects_background.svg');
+    opacity: 1;
+    transform: translateY(0);
+}

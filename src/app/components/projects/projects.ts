@@ -5,8 +5,8 @@ import { RouterLink } from "@angular/router";
   selector: 'app-projects',
   imports: [RouterLink],
   templateUrl: './projects.html',
-  styleUrl: './projects.scss'
+  styleUrls: ['./projects.scss']
 })
 export class Projects {
-
 }
+
