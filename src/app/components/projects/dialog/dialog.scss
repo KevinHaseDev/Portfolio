@@ -1,0 +1,40 @@
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 20px 30px;
+  background: linear-gradient(90deg, #1c1c1c, #3DCFB6);
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  width: 400px;
+  max-width: 90%;
+}
+
+::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.dialog-actions button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dialog-actions button:hover {
+  background: #e65c00;
+}
