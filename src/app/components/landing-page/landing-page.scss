@@ -232,7 +232,7 @@ div {
 .scroll_content {
     display: flex;
     white-space: nowrap;
-    animation: scroll 6s linear infinite;
+    animation: scroll 20s linear infinite;
 
     span {
         color: #35d0b2;
@@ -249,6 +249,6 @@ div {
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-200%);
     }
 }
