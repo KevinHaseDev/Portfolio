@@ -6,8 +6,8 @@
     <div class="projects_section">
         <div class="projects_box">
             <a routerLink="" class="join" (mouseover)="setPreview(0)">
-                <div class="project_content"><span class="project_name">Join <img
-                            src="./assets/icons/Projects/arrow_outward.svg" alt=""></span><span
+                <div class="project_content"><span class="project_name">Join
+                        <img src="./assets/icons/Projects/arrow_outward.svg" alt=""></span><span
                         class="project_language">Angular | Typescript | HTML | CSS | Firebase</span></div>
             </a>
             <a routerLink="" class="el_pollo_loco" (mouseover)="setPreview(1)">
@@ -20,12 +20,14 @@
                             src="./assets/icons/Projects/arrow_outward.svg" alt=""></span><span
                         class="project_language">HTML | CSS | Javascript | API</span></div>
             </a>
-
-            <div class="project_preview preview_background">
-                <img [src]="currentPreview" alt="Projekt-Vorschau">
-            </div>
-
         </div>
+        <div class="project_preview">
+            <img class="background" src="/assets/img/projects/projects_background.svg"
+                alt="Dekoratives Hintergrundbild" />
+            <img class="foreground" [src]="currentPreview" alt="Projekt-Vorschau">
+        </div>
+
+
 
     </div>
 </section>

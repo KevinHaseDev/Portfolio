@@ -3,7 +3,6 @@ section {
     color: #ffffff;
     padding: 60px 120px;
 
-
     h3 {
         font-family: 'Karla', sans-serif;
         font-size: 24px;
@@ -64,14 +63,12 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .project_name {
     font-family: 'Fire Code', sans-serif;
     font-size: 24px;
     font-weight: 700;
-
 }
 
 .project_language {
@@ -84,42 +81,53 @@ section {
     border-bottom: 1px solid #3DCFB6;
 }
 
-// .project_preview {
-//     position: absolute;
-//     top: 0;
-//     right: -550px;
-//     width: 400px;
-//     height: 250px;
-//     border-radius: 30px;
-//     background-position: -40px -30px, center;
-//     background-size: cover, contain;
-//     background-repeat: no-repeat, no-repeat;
-//     opacity: 0;
-//     transform: translateY(10px);
-//     transition: opacity 0.4s ease, transform 0.4s ease, background-image 0.4s ease;
-    
-// }
+.project_preview {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-// // .preview_background
+.project_preview .background {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 60px;
+  width: 350px;
+  height: 230px;
+  border-radius: 48px;
+  z-index: 0;
+  opacity: 0;
+  transform: translate(12px, 12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  overflow: visible;
+}
 
-// .join:hover~.project_preview {
-//     background-image: url('/assets/img/projects/join.svg'),
-//         url('/assets/img/projects/projects_background.svg');
+.project_preview .foreground {
+  position: relative;
+  z-index: 1;
+  width: 350px;
+  height: 230px;
+  border-radius: 40px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
 
-//     opacity: 1;
-//     transform: translateY(0);
-// }
+.projects_box:hover ~ .project_preview .foreground,
+.projects_box:hover ~ .project_preview .background {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 
-// .el_pollo_loco:hover~.project_preview {
-//     background-image: url('/assets/img/projects/el_pollo_loco.svg'),
-//         url('/assets/img/projects/projects_background.svg');
-//     opacity: 1;
-//     transform: translateY(0);
-// }
+.projects_box:has(.join:hover) ~ .project_preview {
+  align-items: flex-start;
+}
 
-// .pokedex:hover~.project_preview {
-//     background-image: url('/assets/img/projects/Pokedex_screen.jpg'),
-//         url('/assets/img/projects/projects_background.svg');
-//     opacity: 1;
-//     transform: translateY(0);
-// }
+.projects_box:has(.el_pollo_loco:hover) ~ .project_preview {
+  align-items: center;
+}
+
+.projects_box:has(.pokedex:hover) ~ .project_preview {
+  align-items: flex-end;
+}
