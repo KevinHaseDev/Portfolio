@@ -84,42 +84,42 @@ section {
     border-bottom: 1px solid #3DCFB6;
 }
 
-.project_preview {
-    position: absolute;
-    top: 0;
-    right: -550px;
-    width: 400px;
-    height: 250px;
-    border-radius: 30px;
-    background-position: -40px -30px, center;
-    background-size: cover, contain;
-    background-repeat: no-repeat, no-repeat;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease, transform 0.4s ease, background-image 0.4s ease;
+// .project_preview {
+//     position: absolute;
+//     top: 0;
+//     right: -550px;
+//     width: 400px;
+//     height: 250px;
+//     border-radius: 30px;
+//     background-position: -40px -30px, center;
+//     background-size: cover, contain;
+//     background-repeat: no-repeat, no-repeat;
+//     opacity: 0;
+//     transform: translateY(10px);
+//     transition: opacity 0.4s ease, transform 0.4s ease, background-image 0.4s ease;
     
-}
+// }
 
-// .preview_background
+// // .preview_background
 
-.join:hover~.project_preview {
-    background-image: url('/assets/img/projects/join.svg'),
-        url('/assets/img/projects/projects_background.svg');
+// .join:hover~.project_preview {
+//     background-image: url('/assets/img/projects/join.svg'),
+//         url('/assets/img/projects/projects_background.svg');
 
-    opacity: 1;
-    transform: translateY(0);
-}
+//     opacity: 1;
+//     transform: translateY(0);
+// }
 
-.el_pollo_loco:hover~.project_preview {
-    background-image: url('/assets/img/projects/el_pollo_loco.svg'),
-        url('/assets/img/projects/projects_background.svg');
-    opacity: 1;
-    transform: translateY(0);
-}
+// .el_pollo_loco:hover~.project_preview {
+//     background-image: url('/assets/img/projects/el_pollo_loco.svg'),
+//         url('/assets/img/projects/projects_background.svg');
+//     opacity: 1;
+//     transform: translateY(0);
+// }
 
-.pokedex:hover~.project_preview {
-    background-image: url('/assets/img/projects/Pokedex_screen.jpg'),
-        url('/assets/img/projects/projects_background.svg');
-    opacity: 1;
-    transform: translateY(0);
-}
+// .pokedex:hover~.project_preview {
+//     background-image: url('/assets/img/projects/Pokedex_screen.jpg'),
+//         url('/assets/img/projects/projects_background.svg');
+//     opacity: 1;
+//     transform: translateY(0);
+// }

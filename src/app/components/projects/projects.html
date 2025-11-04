@@ -5,23 +5,24 @@
     <p> projects to see my skills in action.</p>
     <div class="projects_section">
         <div class="projects_box">
-            <a routerLink="" class="join">
+            <a routerLink="" class="join" (mouseover)="setPreview(0)">
                 <div class="project_content"><span class="project_name">Join <img
                             src="./assets/icons/Projects/arrow_outward.svg" alt=""></span><span
                         class="project_language">Angular | Typescript | HTML | CSS | Firebase</span></div>
             </a>
-            <a routerLink="" class="el_pollo_loco">
+            <a routerLink="" class="el_pollo_loco" (mouseover)="setPreview(1)">
                 <div class="project_content"><span class="project_name">El Pollo Loco <img
                             src="./assets/icons/Projects/arrow_outward.svg" alt=""></span><span
                         class="project_language">Javascript | HTML | CSS</span></div>
             </a>
-            <a routerLink="" class="last_link pokedex">
+            <a routerLink="" class="last_link pokedex" (mouseover)="setPreview(2)">
                 <div class="project_content"><span class="project_name">Pokedex <img
                             src="./assets/icons/Projects/arrow_outward.svg" alt=""></span><span
                         class="project_language">HTML | CSS | Javascript | API</span></div>
             </a>
 
             <div class="project_preview preview_background">
+                <img [src]="currentPreview" alt="Projekt-Vorschau">
             </div>
 
         </div>
