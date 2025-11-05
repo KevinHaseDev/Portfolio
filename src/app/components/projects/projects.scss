@@ -42,6 +42,7 @@ section {
     &:hover {
       background-color: rgba(61, 207, 182, 0.3);
       transition: 0.3s;
+      cursor: pointer;
 
       img {
         display: inline;

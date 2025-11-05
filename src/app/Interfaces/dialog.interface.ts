@@ -4,6 +4,6 @@ export interface ProjectDialog {
     name: string;
     description: string;
     technologies: { name: string; icon: string }[];
-    actions: { github: { label: string; icon: string }; liveTest: { label: string; icon: string } };
+    actions: { github: { label: string; icon: string; link: string }; liveTest: { label: string; icon: string; link: string } };
     footer: { closeLabel: string; previewImage: string; nextProject: { label: string; icon: string } };
 }

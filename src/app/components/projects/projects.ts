@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DOCUMENT, Inject, Renderer2 } from '@angular/core';
 import { Dialog } from './dialog/dialog';
 import { ProjectDialog } from '../../Interfaces/dialog.interface';
 
@@ -10,6 +10,11 @@ import { ProjectDialog } from '../../Interfaces/dialog.interface';
   styleUrls: ['./projects.scss']
 })
 export class Projects {
+  constructor(
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document
+  ) { }
+
   projects = [
     {
       name: "Join",
@@ -27,7 +32,7 @@ export class Projects {
       name: "Pokedex",
       class: 'pokedex last_link',
       languages: ["HTML", "CSS", "Javascript", "API"],
-      previewImages: ['./assets/img/projects/pokedex.svg']
+      previewImages: ['./assets/img/projects/Pokedex_screen.jpg']
     }
   ];
 
@@ -49,11 +54,13 @@ export class Projects {
       actions: {
         github: {
           label: 'GitHub',
-          icon: './assets/icons/Projects/arrow_outward.svg'
+          icon: './assets/icons/Projects/arrow_outward.svg',
+          link: 'https://github.com/KevinHaseDev/Join.git'
         },
         liveTest: {
           label: 'Live Test',
-          icon: './assets/icons/Projects/arrow_outward.svg'
+          icon: './assets/icons/Projects/arrow_outward.svg',
+          link: 'https://kevin-hase.developerakademie.net/Join/index.html'
         }
       },
       footer: {
@@ -78,11 +85,13 @@ export class Projects {
       actions: {
         github: {
           label: 'GitHub',
-          icon: './assets/icons/Projects/arrow_outward.svg'
+          icon: './assets/icons/Projects/arrow_outward.svg',
+          link: 'https://github.com/KevinHaseDev/El-Pollo-Loco.git'
         },
         liveTest: {
           label: 'Live Test',
-          icon: './assets/icons/Projects/arrow_outward.svg'
+          icon: './assets/icons/Projects/arrow_outward.svg',
+          link: 'https://kevin-hase.developerakademie.net/El%20Pollo%20Loco/index.html'
         }
       },
       footer: {
@@ -107,11 +116,13 @@ export class Projects {
       actions: {
         github: {
           label: 'GitHub',
-          icon: './assets/icons/Projects/arrow_outward.svg'
+          icon: './assets/icons/Projects/arrow_outward.svg',
+          link: 'https://github.com/KevinHaseDev/Pokedex.git'
         },
         liveTest: {
           label: 'Live Test',
-          icon: './assets/icons/Projects/arrow_outward.svg'
+          icon: './assets/icons/Projects/arrow_outward.svg',
+          link: 'https://kevin-hase.developerakademie.net/Pokedex/index.html'
         }
       },
       footer: {
@@ -138,11 +149,13 @@ export class Projects {
     actions: {
       github: {
         label: 'GitHub',
-        icon: './assets/icons/Projects/arrow_outward.svg'
+        icon: './assets/icons/Projects/arrow_outward.svg',
+        link: 'https://github.com/KevinHaseDev/Pokedex.git'
       },
       liveTest: {
         label: 'Live Test',
-        icon: './assets/icons/Projects/arrow_outward.svg'
+        icon: './assets/icons/Projects/arrow_outward.svg',
+        link: 'https://kevin-hase.developerakademie.net/Pokedex/index.html'
       }
     },
     footer: {
@@ -157,7 +170,32 @@ export class Projects {
 
   giveObject(index: number): void {
     this.currentPreview = this.projectDialog[index]
+    this.isClicked = true;
+    this.renderer.addClass(this.document.body, 'dialog-open');
+  }
 
+  handleClose() {
+    this.isClicked = false;
+    this.renderer.removeClass(this.document.body, 'dialog-open');
+  }
+
+  handleNextProject() {
+    // Index des aktuellen Projekts finden
+    const currentIndex = this.projectDialog.findIndex(
+      p => p.name === this.currentPreview.name
+    );
+
+    // Nächstes Projekt bestimmen
+    const nextIndex = (currentIndex + 1) % this.projectDialog.length;
+
+    // Neues Projekt setzen
+    this.currentPreview = this.projectDialog[nextIndex];
+  }
+
+  currentPreviewImage: string = this.projects[0].previewImages[0]; // Startwert
+
+  setPreviewImage(image: string): void {
+    this.currentPreviewImage = image;
   }
 }
 

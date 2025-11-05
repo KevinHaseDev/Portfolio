@@ -9,3 +9,7 @@ a {
     text-decoration: none;
     color: #ffffff;
 }
+
+body.dialog-open{
+  overflow: hidden;
+}
