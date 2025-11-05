@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Dialog } from './dialog/dialog';
+import { ProjectDialog } from '../../Interfaces/dialog.interface';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [RouterLink],
+  imports: [Dialog],
   templateUrl: './projects.html',
   styleUrls: ['./projects.scss']
 })
@@ -15,17 +16,30 @@ export class Projects {
     './assets/img/projects/Pokedex_screen.jpg'
   ];
 
-   currentPreview: string = '';
+  currentPreview: string = '';
 
-    ngOnInit(): void {
-        this.currentPreview = this.previewImages[0];
-    }
+  selectedProject?: ProjectDialog;
+  isDialogOpen: boolean = false;
 
-    setPreview(index: number): void {
-        let image = this.previewImages[index];
-        this.currentPreview = `${image}`;
-    }
+  ngOnInit(): void {
+    this.currentPreview = this.previewImages[0];
+  }
 
-  
+  setPreview(index: number): void {
+    this.currentPreview = this.previewImages[index];
+  }
+
+  async openProject(project: ProjectDialog): Promise<void> {
+    this.selectedProject = project;
+    this.isDialogOpen = true;
+    await Promise.resolve();
+  }
+
+  async closeProject(): Promise<void> {
+    this.isDialogOpen = false;
+    this.selectedProject = undefined;
+    await Promise.resolve();
+  }
 }
+
 

@@ -1,84 +1,84 @@
 section {
-    background-color: #1c1c1c;
-    color: #ffffff;
-    padding: 60px 120px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 60px 120px;
 
-    h3 {
-        font-family: 'Karla', sans-serif;
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: #3DCFB6;
-    }
-
-    h1 {
-        font-family: 'Fire Code', sans-serif;
-        font-size: 64px;
-        margin-bottom: 20px;
-        font-weight: 700;
-        color: #3DCFB6;
-    }
-
-    p {
-        font-family: 'Karla', sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-    }
-
-    a {
-        padding: 0 16px;
-        border-top: 1px solid #3DCFB6;
-
-        img {
-            display: none;
-        }
-
-        &:hover {
-            background-color: rgba(61, 207, 182, 0.3);
-            transition: 0.3s;
-
-            img {
-                display: inline;
-            }
-        }
-    }
-}
-
-.projects_section {
-    display: flex;
-    align-items: flex-start;
-    gap: 60px;
-    margin-top: 40px;
-}
-
-.projects_box {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 800px;
-}
-
-.project_content {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.project_name {
-    font-family: 'Fire Code', sans-serif;
+  h3 {
+    font-family: 'Karla', sans-serif;
     font-size: 24px;
     font-weight: 700;
-}
+    margin-bottom: 10px;
+    color: #3DCFB6;
+  }
 
-.project_language {
+  h1 {
+    font-family: 'Fire Code', sans-serif;
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #3DCFB6;
+  }
+
+  p {
     font-family: 'Karla', sans-serif;
     font-size: 18px;
     font-weight: 400;
+  }
+
+  a {
+    padding: 0 16px;
+    border-top: 1px solid #3DCFB6;
+
+    img {
+      display: none;
+    }
+
+    &:hover {
+      background-color: rgba(61, 207, 182, 0.3);
+      transition: 0.3s;
+
+      img {
+        display: inline;
+      }
+    }
+  }
+}
+
+.projects_section {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.projects_box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 800px;
+}
+
+.project_content {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project_name {
+  font-family: 'Fire Code', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.project_language {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .last_link {
-    border-bottom: 1px solid #3DCFB6;
+  border-bottom: 1px solid #3DCFB6;
 }
 
 .project_preview {
@@ -114,20 +114,20 @@ section {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.projects_box:hover ~ .project_preview .foreground,
-.projects_box:hover ~ .project_preview .background {
+.projects_box:hover~.project_preview .foreground,
+.projects_box:hover~.project_preview .background {
   opacity: 1;
   transform: translate(0, 0);
 }
 
-.projects_box:has(.join:hover) ~ .project_preview {
+.projects_box:has(.join:hover)~.project_preview {
   align-items: flex-start;
 }
 
-.projects_box:has(.el_pollo_loco:hover) ~ .project_preview {
+.projects_box:has(.el_pollo_loco:hover)~.project_preview {
   align-items: center;
 }
 
-.projects_box:has(.pokedex:hover) ~ .project_preview {
+.projects_box:has(.pokedex:hover)~.project_preview {
   align-items: flex-end;
 }
