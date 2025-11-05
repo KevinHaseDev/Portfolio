@@ -18,9 +18,6 @@ export class Projects {
 
   currentPreview: string = '';
 
-  selectedProject?: ProjectDialog;
-  isDialogOpen: boolean = false;
-
   ngOnInit(): void {
     this.currentPreview = this.previewImages[0];
   }
@@ -29,17 +26,6 @@ export class Projects {
     this.currentPreview = this.previewImages[index];
   }
 
-  async openProject(project: ProjectDialog): Promise<void> {
-    this.selectedProject = project;
-    this.isDialogOpen = true;
-    await Promise.resolve();
-  }
-
-  async closeProject(): Promise<void> {
-    this.isDialogOpen = false;
-    this.selectedProject = undefined;
-    await Promise.resolve();
-  }
 }
 
 

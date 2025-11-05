@@ -5,17 +5,17 @@
     <p> projects to see my skills in action.</p>
     <div class="projects_section">
         <div class="projects_box">
-            <a class="join" (mouseover)="setPreview(0)" (click)="openProject(dialog.projectDialog[0])">
+            <a class="join" (mouseover)="setPreview(0)" (click)="''">
                 <div class="project_content"><span class="project_name">Join
                         <img src="./assets/icons/Projects/arrow_outward.svg" alt=""></span><span
                         class="project_language">Angular | Typescript | HTML | CSS | Firebase</span></div>
             </a>
-            <a class="el_pollo_loco" (mouseover)="setPreview(1)" (click)="openProject(dialog.projectDialog[1])">
+            <a class="el_pollo_loco" (mouseover)="setPreview(1)" (click)="''">
                 <div class="project_content"><span class="project_name">El Pollo Loco <img
                             src="./assets/icons/Projects/arrow_outward.svg" alt=""></span><span
                         class="project_language">Javascript | HTML | CSS</span></div>
             </a>
-            <a class="last_link pokedex" (mouseover)="setPreview(2)" (click)="openProject(dialog.projectDialog[2])">
+            <a class="last_link pokedex" (mouseover)="setPreview(2)" (click)="''">
                 <div class="project_content"><span class="project_name">Pokedex <img
                             src="./assets/icons/Projects/arrow_outward.svg" alt=""></span><span
                         class="project_language">HTML | CSS | Javascript | API</span></div>
@@ -30,6 +30,5 @@
 
 
     </div>
-    <app-dialog [project]="selectedProject" [isOpen]="isDialogOpen" (closed)="closeProject()"
-        (opened)="selectedProject = $event"></app-dialog>
+    <app-dialog></app-dialog>
 </section>

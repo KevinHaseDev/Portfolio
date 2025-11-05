@@ -10,7 +10,7 @@ import { ProjectDialog } from '../../../Interfaces/dialog.interface';
   styleUrls: ['./dialog.scss']
 })
 export class Dialog {
-  @Input() projectDialog: ProjectDialog[] = [
+  projectDialog: ProjectDialog[] = [
     {
       id: 'infoDialog',
       title: '01',
@@ -101,35 +101,5 @@ export class Dialog {
       }
     }
   ]
-  // parent controls (optional)
-  @Input() project?: ProjectDialog;
-  @Input() isOpen: boolean = false;
-
-  @Output() closed = new EventEmitter<void>();
-  @Output() opened = new EventEmitter<ProjectDialog | undefined>();
-
-  open(project?: ProjectDialog): void {
-    this.project = project ?? this.project ?? this.projectDialog[0];
-    this.isOpen = true;
-    this.opened.emit(this.project);
-  }
-
-  close(): void {
-    this.isOpen = false;
-    this.closed.emit();
-  }
-
-  openById(id: string): void {
-    let found = this.projectDialog.find(p => p.id === id);
-    this.open(found);
-  }
-
-  nextProject(): void {
-    if (!this.project) {
-      return;
-    }
-    let index = this.projectDialog.findIndex(p => p.id === this.project!.id);
-    let nextIndex = (index + 1) % this.projectDialog.length;
-    this.open(this.projectDialog[nextIndex]);
-  }
+  
 }

@@ -1,38 +1,24 @@
-<dialog id="infoDialog" [open]="isOpen" aria-modal="true" [attr.aria-hidden]="!isOpen">
-    <div class="dialog-content" *ngIf="project">
-        <h1>{{ project.title }}</h1>
-        <h2>{{ project.name }}</h2>
-
+<dialog id="infoDialog">
+    <div class="dialog-content">
+        <h1>{{ projectDialog[0].title }}</h1>
+        <h2>{{ projectDialog[0].name }}</h2>
         <h3>What is this project about?</h3>
-        <p>{{ project.description }}</p>
-
-        <div class="dialog-techs">
-            <div *ngFor="let tech of project.technologies">
-                <img [src]="tech.icon" [alt]="tech.name" />
-                <span>{{ tech.name }}</span>
+        <p>{{ projectDialog[0].description }}</p>
+        <div>@for (value of projectDialog[0].technologies; track $index) {
+            <div>
+                <img src="{{ value.icon }}" alt=""><span>{{ value.name }}</span>
             </div>
+           }
         </div>
-
-        <div class="dialog-links" *ngIf="project.actions">
-            <button type="button">
-                {{ project.actions.github?.label }}
-                <img [src]="project.actions.github?.icon" alt="" />
-            </button>
-            <button type="button">
-                {{ project.actions.liveTest?.label }}
-                <img [src]="project.actions.liveTest?.icon" alt="" />
-            </button>
+        <div>
+            <button>GitHub <img src="./assets/icons/Projects/arrow_outward.svg" alt=""></button>
+            <button>Live Test <img src="./assets/icons/Projects/arrow_outward.svg" alt=""></button>
         </div>
+       
     </div>
-
-    <div class="dialog-actions">
-        <button id="closeDialog" type="button" (click)="close()">
-            {{ project?.footer?.closeLabel || 'Schließen' }}
-        </button>
-        <img *ngIf="project?.footer?.previewImage" [src]="project?.footer?.previewImage" alt="" />
-        <button type="button" (click)="nextProject()">
-            {{ project?.footer?.nextProject?.label || 'Next project' }}
-            <img [src]="project?.footer?.nextProject?.icon || './assets/icons/Projects/arrow_forward.svg'" alt="" />
-        </button>
-    </div>
+     <div class="dialog-actions">
+            <button id="closeDialog">Schließen</button>
+            <img src="{{ projectDialog[0].footer.previewImage }}" alt="">
+            <button>Next project <img src="./assets/icons/Projects/arrow_forward.svg" alt=""> </button>
+        </div>
 </dialog>
