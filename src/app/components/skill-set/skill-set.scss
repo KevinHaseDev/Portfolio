@@ -1,6 +1,6 @@
 .wrapper {
     background-color: #1c1c1c;
-   
+    
     width: 100%;
 }
 
@@ -9,7 +9,7 @@ section {
     justify-content: space-around;
     color: white;
     background: radial-gradient(circle at left center, #3dcfb7, #1c1c1c 20%);
-
+    max-width: 1920px;
     h3 {
         font-family: 'Karla', sans-serif;
         font-size: 28px;

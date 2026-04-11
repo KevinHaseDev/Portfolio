@@ -25,7 +25,7 @@ section {
 
     &::before {
         left: 0;
-        background: linear-gradient(to right, #1c1c1c , #1c1c1c00);
+        background: linear-gradient(to right, #1c1c1c, #1c1c1c00);
     }
 
     &::after {
@@ -82,43 +82,74 @@ section {
             margin-left: 30px;
             margin-right: 30px;
         }
+
         .comment_name {
             margin-bottom: 40px;
-            
+
         }
-        .comment_text{
+
+        .comment_text {
             margin-top: 20px;
-        
+
         }
     }
 
-    button {
-        background: none;
+    #ref_nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .nav_buttons {
+        background: transparent;
         border: none;
         cursor: pointer;
-
-        img {
-            width: 24px;
-            height: 24px;
-        }
+        opacity: 0.6;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
     }
-}
 
-.seperator {
-    background-color: white;
-    width: 500px;
-    height: 1px;
-    margin-left: 30px;
-}
+    .nav_buttons img {
+        width: 24px;
+        height: 24px;
+    }
 
-.comment_box_underline {
-    display: flex;
-    align-items: center;
-    
+    /* make dot icons much smaller than arrow icons */
+    .nav_buttons img.dot {
+        width: 6px;
+        height: 6px;
+    }
+
+
+
+    .nav_buttons.active_nav {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    .seperator {
+        background-color: white;
+        width: 500px;
+        height: 1px;
+        margin-left: 30px;
+    }
+
+    .comment_box_underline {
+        display: flex;
+        align-items: center;
+
+    }
 }
 
 @media (max-width: 1024px) {
     section {
+
         &::before,
         &::after {
             width: 100px;
@@ -138,6 +169,7 @@ section {
 
 @media (max-width: 768px) {
     section {
+
         &::before,
         &::after {
             width: 80px;
@@ -191,6 +223,7 @@ section {
 
 @media (max-width: 480px) {
     section {
+
         &::before,
         &::after {
             width: 60px;
@@ -244,6 +277,7 @@ section {
 
 @media (max-width: 320px) {
     section {
+
         &::before,
         &::after {
             width: 40px;

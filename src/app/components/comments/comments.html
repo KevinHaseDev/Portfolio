@@ -1,23 +1,36 @@
-<div class="wrapper">
+<div id="reference_div" class="wrapper">
 <section id="comments" class="content-shell section-space">
     <h2>What my colleagues say about me</h2>
-    <div class="comments_container">
-        
-        @for (text of comments; track $index) {
-        <div class="comment_box">
-            <span class="comment_text">{{ text.comment }}</span>
-            <div class="comment_box_underline">
-            <div class="seperator"></div>
-            <span class="comment_name">{{ text.name }}</span>
-            </div>
+        <div id="reference_cards" class="comments_container">
+             @for (comment of visibleComments(); track $index; let i = $index) {
+                <div class="comment_box single_card" [class.active]="i === 1" [class.left]="i === 0" [class.right]="i === 2">
+                        <span class="comment_text">{{ comment.comment }}</span>
+                        <div class="comment_box_underline">
+                                <div class="seperator"></div>
+                                <span class="comment_name">{{ comment.name }}</span>
+                        </div>
+                </div>
+             }
         </div>
-        }
-        
-    </div>
-    <div>
-        <button><img src="./assets/icons/comments/arrow_back.svg" alt=""></button>
-        <div><p><span class="dote_one">.</span><span class="dote_two">.</span><span class="dote_three">.</span></p></div>
-        <button><img src="./assets/icons/comments/arrow_forward.svg" alt=""></button>
-    </div>
+
+        <div id="ref_nav">
+            <button class="nav_buttons" (click)="prev()">
+                <img src="./assets/icons/comments/arrow_back.svg" alt="previous">
+            </button>
+
+            @for (comment of comments; track $index; let i = $index) {
+                <button
+                    class="nav_buttons"
+                    [class.active_nav]="i === activeIndex"
+                    (click)="activeIndex = i"
+                >
+                    <img class="dot" src="./assets/icons/comments/dot.svg" alt="dot">
+                </button>
+            }
+
+            <button class="nav_buttons" (click)="next()">
+                <img src="./assets/icons/comments/arrow_forward.svg" alt="next">
+            </button>
+        </div>
 </section>
 </div>
