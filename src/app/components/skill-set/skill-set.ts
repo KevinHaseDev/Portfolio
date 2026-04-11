@@ -37,6 +37,22 @@ export class SkillSet {
     icon: './assets/icons/Skills/git_icon.svg'
   },
   {
+    name: 'Firebase',
+    icon: './assets/icons/Skills/firebase_icon.svg'
+  },
+  {
+    name: 'Python',
+    icon: './assets/icons/Skills/python_icon.svg'
+  },
+  {
+    name: 'Django',
+    icon: './assets/icons/Skills/django_icon.svg'
+  },
+  {
+    name: 'SQL',
+    icon: './assets/icons/Skills/SQL_icon.svg'
+  },
+  {
     name: 'Growth Mindset',
     icon: './assets/icons/Skills/mindset_icon.svg'
   }

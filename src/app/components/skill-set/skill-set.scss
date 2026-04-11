@@ -71,18 +71,40 @@ section {
     width: min(500px, 45vw);
     height: auto;
     min-height: 430px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 72px;
-    padding: 80px 20px;
-    text-align: center;
-    img{
-        transition: all 0.1s ease-in-out;
-        &:hover {
-            scale: 1.08;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 80px 20px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        > div {
+            flex: 1 1 120px;
+            max-width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
         }
-    }
+
+        img {
+            width: 64px;
+            height: auto;
+            max-width: 100%;
+            transition: transform 160ms ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.08);
+        }
+
+        p {
+            margin: 0;
+            font-family: 'Karla', sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+        }
 }
 
 @media (max-width: 1024px) {
@@ -100,8 +122,19 @@ section {
     .skill_icons {
         width: 90%;
         max-width: 500px;
-        gap: 50px;
+        gap: 24px;
         padding: 60px 20px;
+        min-height: 400px;
+
+        > div {
+            flex: 1 1 110px;
+            max-width: 140px;
+        }
+
+        img {
+            max-width: 60px;
+            height: auto;
+        }
     }
 }
 
@@ -142,12 +175,17 @@ section {
 
     .skill_icons {
         width: 95%;
-        gap: 40px;
+        gap: 20px;
         padding: 40px 15px;
-        min-height: 350px;
+        min-height: 320px;
+
+        > div {
+            flex: 1 1 100px;
+            max-width: 140px;
+        }
 
         img {
-            max-width: 60px;
+            max-width: 56px;
             height: auto;
         }
     }
@@ -191,12 +229,17 @@ section {
 
     .skill_icons {
         width: 100%;
-        gap: 30px;
+        gap: 16px;
         padding: 30px 10px;
-        min-height: 300px;
+        min-height: 260px;
+
+        > div {
+            flex: 1 1 90px;
+            max-width: 120px;
+        }
 
         img {
-            max-width: 50px;
+            max-width: 48px;
         }
     }
 }
@@ -239,12 +282,17 @@ section {
 
     .skill_icons {
         width: 100%;
-        gap: 20px;
+        gap: 12px;
         padding: 20px 10px;
-        min-height: 250px;
+        min-height: 220px;
+
+        > div {
+            flex: 1 1 80px;
+            max-width: 100px;
+        }
 
         img {
-            max-width: 40px;
+            max-width: 36px;
         }
     }
 }
