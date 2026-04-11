@@ -10,8 +10,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding-top: 0;
     padding-bottom: 0;
+    position: relative;
+}
+
+.logo_button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 
 .links {
@@ -19,14 +27,17 @@ header {
     gap: 20px;
     align-items: center;
 
-    a {
-        text-decoration: none;
+    .nav_link {
         color: #ffffff;
         font-weight: 400;
         font-family: Fira Code, monospace;
         transition: color 0.3s;
         position: relative;
         display: inline-block;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 4px 0;
 
         &::after {
             content: "•";
@@ -41,10 +52,62 @@ header {
             pointer-events: none;
         }
 
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
+        &:hover,
+        &.active {
+            color: #3dcfb6;
+        }
+
+        &:hover::after,
+        &.active::after {
+            opacity: 1;
+        }
+    }
+}
+
+.menu_toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 44px;
+    border: 1px solid #3dcfb6;
+    border-radius: 999px;
+    background: transparent;
+    color: #ffffff;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.menu_text {
+    font-family: Fira Code, monospace;
+    font-size: 14px;
+}
+
+.menu_icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+
+    span {
+        width: 18px;
+        height: 2px;
+        border-radius: 20px;
+        background-color: #3dcfb6;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    &.open {
+        span:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
         }
     }
 }
@@ -107,7 +170,7 @@ img {
     .links {
         gap: 18px;
 
-        a {
+        .nav_link {
             font-size: 15px;
         }
     }
@@ -131,27 +194,48 @@ img {
 
 @media (max-width: 768px) {
     header {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .menu_toggle {
+        display: flex;
     }
 
     img {
         width: min(160px, 35vw);
-        margin: 15px 20px;
+        margin: 15px 0;
     }
 
     .links {
-        gap: 15px;
-        order: 3;
-        width: 100%;
-        justify-content: center;
+        position: absolute;
+        top: calc(100% + 8px);
+        right: var(--content-padding-inline);
+        left: var(--content-padding-inline);
+        border: 1px solid #3dcfb6;
+        border-radius: 20px;
+        background-color: #1c1c1c;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 18px;
 
-        a {
+        &.open {
+            display: flex;
+        }
+
+        .nav_link {
             font-size: 14px;
+            width: 100%;
+            text-align: left;
+            min-height: 44px;
 
             &::after {
-                bottom: -15px;
+                left: auto;
+                right: 0;
+                transform: none;
+                bottom: 12px;
                 font-size: 16px;
             }
         }
@@ -179,19 +263,24 @@ img {
         gap: 12px;
     }
 
+    .menu_toggle {
+        padding: 8px 12px;
+    }
+
     img {
         width: min(140px, 40vw);
-        margin: 12px 10px;
+        margin: 12px 0;
     }
 
     .links {
-        gap: 12px;
+        gap: 8px;
+        padding: 14px;
 
-        a {
+        .nav_link {
             font-size: 13px;
 
             &::after {
-                bottom: -12px;
+                bottom: 11px;
                 font-size: 14px;
             }
         }
@@ -219,19 +308,23 @@ img {
         gap: 10px;
     }
 
+    .menu_toggle {
+        gap: 8px;
+    }
+
     img {
         width: min(120px, 45vw);
-        margin: 10px 5px;
+        margin: 10px 0;
     }
 
     .links {
-        gap: 10px;
+        gap: 6px;
 
-        a {
+        .nav_link {
             font-size: 12px;
 
             &::after {
-                bottom: -10px;
+                bottom: 10px;
                 font-size: 12px;
             }
         }
