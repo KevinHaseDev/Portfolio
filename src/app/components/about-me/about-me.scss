@@ -9,16 +9,49 @@ section {
     justify-content: space-around;
     text-align: center;
 }
-.imageAboutMe {
-    border-radius: 20px;
+
+.image-stack {
+    position: relative;
     width: min(550px, 45vw);
-    aspect-ratio: 1/1;
     margin: 20px;
-    
 }
+
+.image-stack .imageAboutMe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.image-stack .imageAboutMe_background {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+    margin: 0;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: opacity 700ms cubic-bezier(.22,.9,.37,1), transform 700ms cubic-bezier(.22,.9,.37,1);
+}
+
+.image-stack:hover .imageAboutMe_background {
+    opacity: 1;
+    transform: translate(-6%, 6%);
+}
+
 .left_part {
-   margin-bottom: 140px;
+    margin-bottom: 140px;
 }
+
 .right_part {
     display: flex;
     flex-direction: column;
@@ -33,7 +66,8 @@ span {
     margin-left: 20px;
     margin-top: 90px;
 }
-.aboutMe{
+
+.aboutMe {
     border: 1px solid #3DCFB6;
     border-radius: 20px;
     padding: 20px;
@@ -42,35 +76,47 @@ span {
     min-height: 600px;
     width: min(600px, 50vw);
     max-width: 100%;
-    >h2{
+
+    >h2 {
         color: #3DCFB6;
         font-family: 'Fire Code', monospace;
         font-size: 64px;
         font-weight: bold;
     }
-    >p{
+
+}
+
+.p_static {
+    color: white;
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.p_hover {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+
+    &:hover {
         color: white;
-        font-family: 'Karla', sans-serif;
-        font-size: 18px;
-        text-align: left;
-        margin-bottom: 20px;
+        cursor:default;
     }
 }
 
-.text{
+.text {
     display: flex;
     flex-direction: column;
-    > div {
+
+    >div {
         display: flex;
         align-items: flex-start;
         gap: 10px;
-         >p{
-        color: white;
-        font-family: 'Karla', sans-serif;
-        font-size: 18px;
-        text-align: left;
-        margin-bottom: 20px;
-        >.icons{
+
+        >.icons {
             width: 32px;
             height: 32px;
             margin-right: 10px;
@@ -78,11 +124,11 @@ span {
         }
     }
 }
-}
+
 @media (max-width: 1260px) {
-.aboutMe{
-    width: auto;
-}
+    .aboutMe {
+        width: auto;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -120,11 +166,11 @@ span {
         padding: 15px;
         margin: 15px auto;
 
-        > h2 {
+        >h2 {
             font-size: 48px;
         }
 
-        > p {
+        >p {
             font-size: 16px;
         }
     }
@@ -135,7 +181,7 @@ span {
         margin-left: 15px;
     }
 
-    .text > div > p {
+    .text>div>p {
         font-size: 16px;
     }
 }
@@ -156,11 +202,11 @@ span {
         margin: 10px auto;
         height: auto;
 
-        > h2 {
+        >h2 {
             font-size: 36px;
         }
 
-        > p {
+        >p {
             font-size: 14px;
             margin-bottom: 15px;
         }
@@ -172,14 +218,14 @@ span {
         margin-left: 10px;
     }
 
-    .text > div {
+    .text>div {
         gap: 8px;
 
-        > p {
+        >p {
             font-size: 14px;
             margin-bottom: 15px;
 
-            > .icons {
+            >.icons {
                 width: 24px;
                 height: 24px;
                 margin-right: 8px;
@@ -199,11 +245,11 @@ span {
         padding: 10px;
         margin: 5px auto;
 
-        > h2 {
+        >h2 {
             font-size: 28px;
         }
 
-        > p {
+        >p {
             font-size: 13px;
             margin-bottom: 12px;
         }
@@ -215,14 +261,14 @@ span {
         margin-left: 8px;
     }
 
-    .text > div {
+    .text>div {
         gap: 6px;
 
-        > p {
+        >p {
             font-size: 13px;
             margin-bottom: 12px;
 
-            > .icons {
+            >.icons {
                 width: 20px;
                 height: 20px;
                 margin-right: 6px;
