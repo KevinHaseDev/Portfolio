@@ -1,15 +1,110 @@
+:root {
+  --color-bg: #1c1c1c;
+  --color-bg-alt: #08463b;
+  --color-accent: #3dcfb6;
+  --color-text: #ffffff;
+  --color-focus: #3dcfb6;
+
+  --font-sans: 'Karla', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  --space-section-desktop: 96px;
+  --space-section-tablet: 72px;
+  --space-section-mobile: 56px;
+
+  --radius-sm: 10px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  --radius-pill: 999px;
+
+  --content-max-width: 1440px;
+  --content-padding-inline: 120px;
+
+  --breakpoint-desktop: 1024px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-mobile: 480px;
+
+  --z-header: 900;
+  --z-overlay: 999;
+  --z-modal: 1000;
+
+  --header-offset: 104px;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 a {
-    text-decoration: none;
-    color: #ffffff;
+  text-decoration: none;
+  color: var(--color-text);
 }
 
-body.dialog-open{
+section[id] {
+  scroll-margin-top: var(--header-offset);
+}
+
+.content-shell {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding-left: var(--content-padding-inline);
+  padding-right: var(--content-padding-inline);
+}
+
+.section-space {
+  padding-top: var(--space-section-desktop);
+  padding-bottom: var(--space-section-desktop);
+}
+
+:is(a, button, input, textarea, select, [role='button'], [tabindex]):focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+body.dialog-open {
   overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --content-padding-inline: 80px;
+    --header-offset: 96px;
+  }
+
+  .section-space {
+    padding-top: var(--space-section-tablet);
+    padding-bottom: var(--space-section-tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --content-padding-inline: 40px;
+    --header-offset: 88px;
+  }
+
+  .section-space {
+    padding-top: var(--space-section-mobile);
+    padding-bottom: var(--space-section-mobile);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --content-padding-inline: 20px;
+    --header-offset: 80px;
+  }
 }

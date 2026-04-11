@@ -8,9 +8,6 @@ section {
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 40px 20px;
 }
 .imageAboutMe {
     border-radius: 20px;
@@ -91,7 +88,6 @@ span {
 @media (max-width: 1024px) {
     section {
         flex-direction: column;
-        padding: 20px;
     }
 
     .imageAboutMe {
@@ -145,10 +141,6 @@ span {
 }
 
 @media (max-width: 480px) {
-    section {
-        padding: 15px;
-    }
-
     .imageAboutMe {
         width: 280px;
         margin: 15px auto;
@@ -197,10 +189,6 @@ span {
 }
 
 @media (max-width: 320px) {
-    section {
-        padding: 10px;
-    }
-
     .imageAboutMe {
         width: 240px;
         margin: 10px auto;

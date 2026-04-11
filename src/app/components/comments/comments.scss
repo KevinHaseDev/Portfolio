@@ -5,13 +5,10 @@
 
 section {
     color: #ffffff;
-    padding: 60px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 1440px;
-    margin: 0 auto;
     overflow: hidden;
     position: relative;
 
@@ -126,7 +123,6 @@ section {
         &::after {
             width: 100px;
         }
-        padding: 50px 40px;
 
         .comments_container {
             flex-direction: column;
@@ -146,7 +142,6 @@ section {
         &::after {
             width: 80px;
         }
-        padding: 40px 30px;
 
         h2 {
             font-size: 20px;
@@ -200,7 +195,6 @@ section {
         &::after {
             width: 60px;
         }
-        padding: 30px 20px;
 
         h2 {
             font-size: 18px;
@@ -254,7 +248,6 @@ section {
         &::after {
             width: 40px;
         }
-        padding: 20px 15px;
 
         h2 {
             font-size: 16px;
