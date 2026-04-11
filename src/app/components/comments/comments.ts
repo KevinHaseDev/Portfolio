@@ -11,16 +11,16 @@ export class Comments {
 
   comments: { comment: string, name: string }[] = [
     {
-      comment: "Code is clean and well structured. Always open for new technologies and willing to learn. A great team player!",
-      name: "John Doe"
+      comment: "Kevin is a highly reliable and dedicated team member. He manages his time very well, works equally effectively independently and within a team, and is always punctual. In addition, he is helpful person.",
+      name: "Anastasia Tsypkaykina"
     },
     {
-      comment: "Always willing to help and support teammates. A true asset to the team!",
-      name: "Jane Smith"
+      comment: "Kevin made a significant contribution to the success of our project thanks to his clear communication, extensive knowledge, and quick grasp of new concepts. He was also always willing to lend a hand whenever help was needed. ",
+      name: "Imra Skaliks"
     },
     {
-      comment: "Delivers high-quality work consistently. Very reliable and dedicated!",
-      name: "Jim Brown"
+      comment: "Kevin was an exceptionally patient and supportive teammate who consistently helped the team and provided clear guidance when needed. His presence created a positive and collaborative environment, and I would be very happy to work with him again.",
+      name: "Younes Darabi"
     }
   ];
 
