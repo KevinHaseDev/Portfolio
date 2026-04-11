@@ -3,7 +3,6 @@
 
         <button class="menu_toggle" type="button" aria-controls="primary-navigation" [attr.aria-expanded]="isMenuOpen"
             [attr.aria-label]="isMenuOpen ? 'Close menu' : 'Open menu'" (click)="toggleMenu()">
-            <span class="menu_text">Menu</span>
             <span class="menu_icon" [class.open]="isMenuOpen" aria-hidden="true">
                 <span></span>
                 <span></span>
@@ -28,7 +27,7 @@
         </nav>
         <button class="logo_button" type="button" (click)="navigateToSection('home')"
             aria-label="Navigate to home section">
-            <img src="./assets/img/Monogramm3.png" alt="Portfolio logo">
+            <img [src]="isMobileLayout ? './assets/img/Monogramm_short.png' : './assets/img/Monogramm3.png'" alt="Portfolio logo">
         </button>
     </header>
 </div>
