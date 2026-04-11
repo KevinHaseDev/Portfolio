@@ -55,12 +55,12 @@ export class Projects {
         github: {
           label: 'GitHub',
           icon: './assets/icons/Projects/arrow_outward.svg',
-          link: 'https://github.com/KevinHaseDev/Join.git'
+          link: 'https://github.com/Younes-Darabi/join-project'
         },
         liveTest: {
           label: 'Live Test',
           icon: './assets/icons/Projects/arrow_outward.svg',
-          link: 'https://kevin-hase.developerakademie.net/Join/index.html'
+          link: 'https://join-1351.developerakademie.net/index.html'
         }
       },
       footer: {
