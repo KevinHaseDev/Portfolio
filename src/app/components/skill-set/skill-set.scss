@@ -11,7 +11,7 @@ section {
     background: radial-gradient(circle at left center, #3dcfb7, #1c1c1c 20%);
     max-width: 1920px;
     h3 {
-        font-family: 'Karla', sans-serif;
+        font-family: var(--font-sans);
         font-size: 28px;
         color: #3DCFB6;
         margin-bottom: 30px;
@@ -30,25 +30,25 @@ section {
     width: min(520px, 45vw);
 
     >h1 {
-        font-family: 'Fire Code', sans-serif;
+        font-family: var(--font-mono);
         font-size: 64px;
         font-weight: 700;
         color: #3DCFB6;
     }
     >h4 {
-        font-family: 'Fire Code', sans-serif;
+        font-family: var(--font-mono);
         font-size: 24px;
         font-weight: 700;
     }
 
     >p {
-        font-family: 'Karla', sans-serif;
+        font-family: var(--font-sans);
         font-size: 18px;
         font-weight: 400;
 
     }
     >a{
-        font-family: 'Karla', sans-serif;
+        font-family: var(--font-sans);
         font-size: 18px;
         font-weight: 400;
         text-decoration: none;

@@ -22,7 +22,7 @@ section {
 
     h2 {
         font-size: 24px;
-        font-family: 'Karla', sans-serif;
+        font-family: var(--font-sans);
         font-weight: 500;
         margin-bottom: 10px;
         color: #00bfa6;
@@ -30,7 +30,7 @@ section {
 
     h3 {
         font-size: 64px;
-        font-family: 'Fire code', monospace;
+        font-family: var(--font-mono);
         font-weight: 700;
         color: #00bfa6;
         margin-bottom: 20px;
@@ -38,7 +38,7 @@ section {
 
     h4 {
         font-size: 24px;
-        font-family: 'Fire code', monospace;
+        font-family: var(--font-mono);
         font-weight: 700;
         color: #00bfa6;
         margin-bottom: 20px;
@@ -50,7 +50,7 @@ section {
 }
 
 .label_text {
-    font-family: 'Fire code', monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     font-size: 24px;
     color: #00bfa6;

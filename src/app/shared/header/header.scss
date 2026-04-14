@@ -30,7 +30,7 @@ header {
     .nav_link {
         color: #ffffff;
         font-weight: 400;
-        font-family: Fira Code, monospace;
+        font-family: var(--font-mono);
         transition: color 0.3s;
         position: relative;
         display: inline-block;
@@ -78,7 +78,7 @@ header {
 }
 
 .menu_text {
-    font-family: Fira Code, monospace;
+    font-family: var(--font-mono);
     font-size: 14px;
 }
 
@@ -142,7 +142,7 @@ img {
         &::before {
             content: "EN";
             font-weight: bold;
-            font-family: Fira Code, monospace;
+                font-family: var(--font-mono);
             padding-top: 5px;
             color: white;
             position: absolute;
@@ -249,7 +249,7 @@ img {
             text-align: center;
             min-height: auto;
             padding: 8px 0;
-            font-family: 'Fira Code', monospace;
+                font-family: var(--font-mono);
             letter-spacing: 1px;
             color: #ffffff;
             background: transparent;

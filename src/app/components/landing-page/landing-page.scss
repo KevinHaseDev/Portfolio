@@ -41,9 +41,6 @@ section {
     width: 1px;
     height: 250px;
     background-color: #35d0b2;
-    font-family: 'Fira Code', monospace;
-    font-size: 14px;
-    color: #35d0b2;
     z-index: 1;
     flex-direction: column;
 
@@ -75,7 +72,6 @@ section {
     width: 1px;
     height: 250px;
     background-color: #ffffff;
-    color: #35d0b2;
     z-index: 1;
 
 }
@@ -86,7 +82,7 @@ section {
     align-items: center;
     justify-content: space-around;
     gap: 20px;
-    font-family: 'Karla', sans-serif;
+        font-family: var(--font-sans);
     font-size: 18px;
     font-weight: 400;
     rotate: -90deg;
@@ -106,7 +102,6 @@ section {
                 left: 50%;
                 transform: translateX(-50%);
                 bottom: -20px;
-                font-size: 18px;
                 color: #36b39a;
                 opacity: 0;
                 transition: opacity 0.3s ease, filter 0.3s ease;
@@ -143,14 +138,14 @@ div {
 
     >h1 {
         font-size: 128px;
-        font-family: 'Karla', sans-serif;
+        font-family: var(--font-sans);
         font-weight: bold;
 
     }
 
     >h2 {
         font-size: 40px;
-        font-family: 'Fira Code', sans-serif;
+        font-family: var(--font-mono);
         font-weight: 400;
     }
 }
@@ -167,7 +162,7 @@ div {
         display: inline-block;
         overflow: hidden;
         font-size: 18px;
-        font-family: 'Karla', sans-serif;
+        font-family: var(--font-sans);
         font-weight: 400;
         padding: 10px 20px;
         border: 2px solid #ffffff;
@@ -239,7 +234,7 @@ div {
         font-size: 32px;
         letter-spacing: 1px;
         padding-right: 50px;
-        font-family: 'Karla', sans-serif;
+        font-family: var(--font-sans);
     }
 }
 
