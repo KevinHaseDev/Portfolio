@@ -123,9 +123,18 @@ form {
     align-items: flex-start;
     margin: 40px 0;
 
-    span {
+    a {
         color: #00bfa6;
+        
+        &:hover {
+            color: #ffffff;
+            text-decoration: underline;
+            text-decoration-color: #00bfa6;
+            cursor: pointer;
+        }       
+
     }
+    
 }
 
 .checkbox input {

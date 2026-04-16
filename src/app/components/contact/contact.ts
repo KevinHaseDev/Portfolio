@@ -1,10 +1,11 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { ContactFormModel } from '../../Interfaces/contact.interface';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })

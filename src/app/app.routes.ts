@@ -6,6 +6,7 @@ import { SkillSet } from './components/skill-set/skill-set';
 import { Comments } from './components/comments/comments';
 import { AboutMe } from './components/about-me/about-me';
 import { LegalNotice } from './components/legal-notice/legal-notice';
+import { PrivacyPolicy } from './components/privacy-policy/privacy-policy';
 // import { LandingPage } from './components/landing-page/landing-page';
 
 export const routes: Routes = [
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'comments', component: Comments },
     { path: 'about', component: AboutMe },
     { path: 'legal-notice', component: LegalNotice },
+    { path: 'privacy-policy', component: PrivacyPolicy },
     // { path: 'landing', component: LandingPage }
 ];
