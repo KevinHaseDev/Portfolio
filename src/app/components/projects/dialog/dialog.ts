@@ -11,6 +11,7 @@ import { ProjectDialog } from '../../../Interfaces/dialog.interface';
 })
 export class Dialog {
   @Input() projectDialog!: ProjectDialog;
+  @Input() projectDescriptionTitle = '';
 
   @Output() closeDialog = new EventEmitter<void>();
 

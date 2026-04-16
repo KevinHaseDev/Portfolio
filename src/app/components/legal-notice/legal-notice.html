@@ -1,70 +1,52 @@
 <main class="wrapper">
   <section class="legal_notice content-shell section-space" aria-labelledby="legal_notice_heading">
-    <h1 id="legal_notice_heading">Legal Notice</h1>
+    <h1 id="legal_notice_heading">{{ content().pageTitle }}</h1>
 
     <article class="legal_copy">
       <section class="legal_block">
-        <h2>Imprint</h2>
+        <h2>{{ content().imprintTitle }}</h2>
         <ul>
           <li>Kevin Hase</li>
-          <li>Thuringia, Germany</li>
-          <li>Email: <a href="mailto:hasekevin21@googlemail.com">hasekevin21@googlemail.com</a></li>
+          <li>{{ content().locationText }}</li>
+          <li>{{ content().emailLabel }}: <a href="mailto:hasekevin21@googlemail.com">hasekevin21@googlemail.com</a></li>
         </ul>
       </section>
 
       <section class="legal_block">
-        <h2>Acceptance of Terms</h2>
-        <p>
-          By accessing and using this portfolio, you acknowledge and agree to the following terms and conditions.
-          These terms may be updated from time to time without prior notice.
-        </p>
+        <h2>{{ content().acceptanceTitle }}</h2>
+        <p>{{ content().acceptanceText }}</p>
       </section>
 
       <section class="legal_block">
-        <h2>Scope and Ownership of the Product</h2>
-        <p>
-          This portfolio is presented for professional showcase purposes. All design, code snippets, and written
-          content are part of a personal web presence unless otherwise stated.
-        </p>
+        <h2>{{ content().scopeTitle }}</h2>
+        <p>{{ content().scopeText }}</p>
       </section>
 
       <section class="legal_block">
-        <h2>Proprietary Rights</h2>
-        <p>
-          The overall design and structure are protected by intellectual property rights. Unauthorized reuse,
-          duplication, or redistribution of content is not permitted.
-        </p>
+        <h2>{{ content().rightsTitle }}</h2>
+        <p>{{ content().rightsText }}</p>
       </section>
 
       <section class="legal_block">
-        <h2>Use of the Product</h2>
-        <p>
-          You may use this website only for lawful purposes. Any attempt to damage, manipulate, or misuse the site
-          or contact channels is strictly prohibited.
-        </p>
+        <h2>{{ content().useTitle }}</h2>
+        <p>{{ content().useText }}</p>
       </section>
 
       <section class="legal_block">
-        <h2>Disclaimer and Limitation of Liability</h2>
-        <p>
-          This portfolio is provided as is, without warranties of any kind. No liability is assumed for external
-          links, third-party services, or incidental damages resulting from the use of this website.
-        </p>
+        <h2>{{ content().disclaimerTitle }}</h2>
+        <p>{{ content().disclaimerText }}</p>
       </section>
 
       <section class="legal_block">
-        <h2>Indemnity</h2>
-        <p>
-          You agree to indemnify and hold harmless the site owner against claims, damages, or legal costs arising
-          from misuse of this website or violation of these terms.
-        </p>
+        <h2>{{ content().indemnityTitle }}</h2>
+        <p>{{ content().indemnityText }}</p>
       </section>
 
       <section class="legal_block">
         <p>
-          For legal inquiries, please contact <a href="mailto:hasekevin21@googlemail.com">hasekevin21@googlemail.com</a>.
+          {{ content().inquiryText }} <a href="mailto:hasekevin21@googlemail.com">hasekevin21@googlemail.com</a>.
         </p>
-        <p class="legal_date">Date: April 16, 2026</p>
+        <p class="legal_date">{{ content().dateLabel }}</p>
       </section>
     </article>
   </section>

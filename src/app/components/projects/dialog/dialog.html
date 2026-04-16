@@ -3,7 +3,7 @@
 <div class="dialog-content">
         <h1>{{ projectDialog.title }}</h1>
         <h2>{{ projectDialog.name }}</h2>
-        <h3>What is this project about?</h3>
+        <h3>{{ projectDescriptionTitle }}</h3>
         <p>{{ projectDialog.description }}</p>
         <div class="icon_container">@for (value of projectDialog.technologies; track $index) {
             <div class="icon_container">
@@ -12,14 +12,14 @@
             }
         </div>
         <div class="btn_div">
-            <a class="btn_github" href="{{ projectDialog.actions.github.link }}">GitHub <img src="./assets/icons/Projects/arrow_outward.svg" alt=""></a>
-            <a class="btn_live_test" href="{{ projectDialog.actions.liveTest.link }}">Live Test <img src="./assets/icons/Projects/arrow_outward.svg" alt=""></a>
+            <a class="btn_github" href="{{ projectDialog.actions.github.link }}">{{ projectDialog.actions.github.label }} <img src="./assets/icons/Projects/arrow_outward.svg" alt=""></a>
+            <a class="btn_live_test" href="{{ projectDialog.actions.liveTest.link }}">{{ projectDialog.actions.liveTest.label }} <img src="./assets/icons/Projects/arrow_outward.svg" alt=""></a>
         </div>
 
     </div>
     <div class="dialog-actions">
         <button (click)="close()" id="closeDialog"><img class="close_icon" src="./assets/icons/Projects/close_small.svg" alt=""></button>
         <img class="preview_image" src="{{ projectDialog.footer.previewImage }}" alt="">
-        <button (click)="next()" class="btn_next">Next project <img src="./assets/icons/Projects/arrow_forward.svg" alt=""> </button>
+        <button (click)="next()" class="btn_next">{{ projectDialog.footer.nextProject.label }} <img src="./assets/icons/Projects/arrow_forward.svg" alt=""> </button>
     </div>
     </div>

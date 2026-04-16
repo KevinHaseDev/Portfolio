@@ -2,7 +2,7 @@
     <header class="content-shell">
 
         <button class="menu_toggle" type="button" aria-controls="primary-navigation" [attr.aria-expanded]="isMenuOpen"
-            [attr.aria-label]="isMenuOpen ? 'Close menu' : 'Open menu'" (click)="toggleMenu()">
+            [attr.aria-label]="getMenuToggleAriaLabel()" (click)="toggleMenu()">
             <span class="menu_icon" [class.open]="isMenuOpen" aria-hidden="true">
                 <span></span>
                 <span></span>
@@ -10,10 +10,11 @@
             </span>
         </button>
 
-        <nav id="primary-navigation" class="links" [class.open]="isMenuOpen" aria-label="Primary navigation"
+        <nav id="primary-navigation" class="links" [class.open]="isMenuOpen" [attr.aria-label]="getNavigationAriaLabel()"
             [attr.aria-hidden]="getAriaHiddenValue()">
             <label class="switch">
-                <input type="checkbox" aria-label="Change language">
+                <input type="checkbox" [checked]="isGermanLanguageActive()" [attr.aria-label]="getLanguageSwitchAriaLabel()"
+                    (change)="onLanguageSwitchChange($event)">
                 <span class="slider round"></span>
             </label>
 
@@ -21,16 +22,16 @@
             <button class="nav_link" type="button" (click)="navigateToSection(section.id)"
                 [class.active]="activeSectionId === section.id"
                 [attr.aria-current]="activeSectionId === section.id ? 'location' : null">
-                {{ section.label }}
+                {{ getSectionLabel(section) }}
             </button>
             }
         </nav>
         <button class="logo_button" type="button" (click)="navigateToSection('home')"
-            aria-label="Navigate to home section">
+            [attr.aria-label]="getHomeButtonAriaLabel()">
             <span class="logo_stack">
                 <picture class="logo_picture logo_picture_default">
                     <source media="(max-width: 768px)" srcset="./assets/img/Monogramm_short.png">
-                    <img class="logo_image" src="./assets/img/Monogramm.png" alt="Portfolio logo">
+                    <img class="logo_image" src="./assets/img/Monogramm.png" [attr.alt]="getLogoAltText()">
                 </picture>
                 <picture class="logo_picture logo_picture_hover" aria-hidden="true">
                     <source media="(max-width: 768px)" srcset="./assets/img/Monogramm_hover_short.png">

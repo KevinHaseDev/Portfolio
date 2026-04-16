@@ -1,9 +1,13 @@
 import { AfterViewInit, Component, HostListener, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppLanguage, LanguageService } from '../../services/language.service';
 
 type NavigationSection = {
   id: string;
-  label: string;
+  labelByLanguage: {
+    en: string;
+    de: string;
+  };
 };
 
 @Component({
@@ -14,17 +18,48 @@ type NavigationSection = {
 })
 export class Header implements AfterViewInit {
   private router = inject(Router);
+  private languageService = inject(LanguageService);
 
   isMenuOpen = false;
-  isMobileLayout = false;
+  isMobileLayout = this.getInitialLayoutState();
   activeSectionId = 'home';
 
   sections: NavigationSection[] = [
-    { id: 'about', label: 'About me' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'comments', label: 'Comments' },
-    { id: 'contact', label: 'Contact' }
+    {
+      id: 'about',
+      labelByLanguage: {
+        en: 'About me',
+        de: 'Über mich'
+      }
+    },
+    {
+      id: 'skills',
+      labelByLanguage: {
+        en: 'Skills',
+        de: 'Fähigkeiten'
+      }
+    },
+    {
+      id: 'projects',
+      labelByLanguage: {
+        en: 'Projects',
+        de: 'Projekte'
+      }
+    },
+    {
+      id: 'comments',
+      labelByLanguage: {
+        en: 'Comments',
+        de: 'Kommentare'
+      }
+    },
+    {
+      id: 'contact',
+      labelByLanguage: {
+        en: 'Contact',
+        de: 'Kontakt'
+      }
+    }
   ];
 
   ngAfterViewInit(): void {
@@ -56,6 +91,64 @@ export class Header implements AfterViewInit {
     this.isMenuOpen = false;
   }
 
+  onLanguageSwitchChange(event: Event): void {
+    let languageToggle = event.target as HTMLInputElement | null;
+    if (!languageToggle) {
+      return;
+    }
+    let nextLanguage: AppLanguage = languageToggle.checked ? 'de' : 'en';
+    this.languageService.setLanguage(nextLanguage);
+  }
+
+  isGermanLanguageActive(): boolean {
+    return this.languageService.isGermanLanguageActive();
+  }
+
+  getSectionLabel(section: NavigationSection): string {
+    let currentLanguage = this.languageService.currentLanguage();
+    return section.labelByLanguage[currentLanguage];
+  }
+
+  getMenuToggleAriaLabel(): string {
+    let currentLanguage = this.languageService.currentLanguage();
+    if (currentLanguage === 'de') {
+      return this.isMenuOpen ? 'Menü schließen' : 'Menü öffnen';
+    }
+    return this.isMenuOpen ? 'Close menu' : 'Open menu';
+  }
+
+  getNavigationAriaLabel(): string {
+    let currentLanguage = this.languageService.currentLanguage();
+    if (currentLanguage === 'de') {
+      return 'Hauptnavigation';
+    }
+    return 'Primary navigation';
+  }
+
+  getLanguageSwitchAriaLabel(): string {
+    let currentLanguage = this.languageService.currentLanguage();
+    if (currentLanguage === 'de') {
+      return 'Sprache auf Englisch umstellen';
+    }
+    return 'Switch language to German';
+  }
+
+  getHomeButtonAriaLabel(): string {
+    let currentLanguage = this.languageService.currentLanguage();
+    if (currentLanguage === 'de') {
+      return 'Zur Startsektion navigieren';
+    }
+    return 'Navigate to home section';
+  }
+
+  getLogoAltText(): string {
+    let currentLanguage = this.languageService.currentLanguage();
+    if (currentLanguage === 'de') {
+      return 'Portfolio Logo';
+    }
+    return 'Portfolio logo';
+  }
+
   async navigateToSection(sectionId: string): Promise<void> {
     this.activeSectionId = sectionId;
     this.closeMenu();
@@ -67,6 +160,13 @@ export class Header implements AfterViewInit {
       return 'false';
     }
     return this.isMenuOpen ? 'false' : 'true';
+  }
+
+  private getInitialLayoutState(): boolean {
+    if (typeof window === 'undefined') {
+      return false;
+    }
+    return window.innerWidth <= 768;
   }
 
   private updateLayoutState(): void {

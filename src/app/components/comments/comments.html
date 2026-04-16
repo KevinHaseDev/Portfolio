@@ -1,6 +1,6 @@
 <div id="reference_div" class="wrapper">
 <section id="comments" class="content-shell section-space">
-    <h2>What my colleagues say about me</h2>
+    <h2>{{ content().heading }}</h2>
         <div id="reference_cards" class="comments_container">
              @for (comment of visibleComments(); track $index; let i = $index) {
                 <div class="comment_box single_card" [class.active]="i === 1" [class.left]="i === 0" [class.right]="i === 2">
@@ -18,7 +18,7 @@
                 <img src="./assets/icons/comments/arrow_back.svg" alt="previous">
             </button>
 
-            @for (comment of comments; track $index; let i = $index) {
+            @for (comment of content().items; track $index; let i = $index) {
                 <button
                     class="nav_buttons"
                     [class.active_nav]="i === activeIndex"

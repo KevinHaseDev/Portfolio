@@ -1,34 +1,33 @@
 <div class="wrapper">
 <section id="contact" class="contact content-shell section-space">
   <div class="contact-text">
-    <h2>Contact me</h2>
-    <h3>Let's work <br> together</h3>
-    <h4>Got a problem to solve?</h4>
-    <p>Encourage people to contact you and describe what role you are interested in.
-      Show that you want to help others with their projects through your work.</p>
-    <p>Need a Frontend developer?<span> Let's talk!</span></p>
+    <h2>{{ content().sectionTitle }}</h2>
+    <h3>{{ content().sectionHeadlineLineOne }} <br> {{ content().sectionHeadlineLineTwo }}</h3>
+    <h4>{{ content().problemHeadline }}</h4>
+    <p>{{ content().introductionText }}</p>
+    <p>{{ content().frontendPromptText }}<span>{{ content().frontendPromptHighlight }}</span></p>
   </div>
 
   <form #contactForm="ngForm" (ngSubmit)="handleSubmit(contactForm)" novalidate>
     <div class="contact-form">
       <div class="seperator"></div>
-      <label class="label_text" for="name">What's your name?</label>
-      <input type="text" id="name" name="name" placeholder="Your name goes here" required
+      <label class="label_text" for="name">{{ content().nameLabel }}</label>
+      <input type="text" id="name" name="name" [placeholder]="content().namePlaceholder" required
         pattern="^(?=.*[A-Za-z])[A-Za-z\s'-]+$" #nameModel="ngModel" [(ngModel)]="formModel.name"
         [class.input_error]="showValidationError(nameModel)">
       @if (showValidationError(nameModel)) {
       <p class="field_error_message">{{ getNameErrorMessage(nameModel) }}</p>
       }
       <div class="seperator"></div>
-      <label class="label_text" for="email">What's your email?</label>
-      <input type="email" id="email" name="email" placeholder="youremail@email.com" required email
+      <label class="label_text" for="email">{{ content().emailLabel }}</label>
+      <input type="email" id="email" name="email" [placeholder]="content().emailPlaceholder" required email
         #emailModel="ngModel" [(ngModel)]="formModel.email" [class.input_error]="showValidationError(emailModel)">
       @if (showValidationError(emailModel)) {
       <p class="field_error_message">{{ getEmailErrorMessage(emailModel) }}</p>
       }
       <div class="seperator"></div>
-      <label class="label_text" for="message">How can I help you?</label>
-      <textarea id="message" name="message" rows="3" placeholder="Hello Lukas, I am interested in..."
+      <label class="label_text" for="message">{{ content().messageLabel }}</label>
+      <textarea id="message" name="message" rows="3" [placeholder]="content().messagePlaceholder"
         required #messageModel="ngModel" [(ngModel)]="formModel.message"
         [class.input_error]="showValidationError(messageModel)"></textarea>
       @if (showValidationError(messageModel)) {
@@ -38,8 +37,8 @@
       <div class="checkbox">
         <input type="checkbox" id="privacy" name="privacy" required #privacyModel="ngModel"
           [(ngModel)]="formModel.privacy" [class.checkbox_input_error]="showValidationError(privacyModel)">
-        <label for="privacy">I've read the <a routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as
-          outlined.</label>
+        <label for="privacy">{{ content().privacyLabelPrefix }} <a routerLink="/privacy-policy">{{ content().privacyPolicyLabel }}</a>
+          {{ content().privacyLabelSuffix }}</label>
       </div>
       @if (showValidationError(privacyModel)) {
       <p class="field_error_message checkbox_error_message">{{ getPrivacyErrorMessage(privacyModel) }}</p>
@@ -47,7 +46,7 @@
     </div>
     <div>
       <button type="submit" [disabled]="isSending">
-        {{ isSending ? 'Sending...' : 'Say Hello :)' }}
+        {{ getSubmitButtonLabel() }}
       </button>
     </div>
   </form>
@@ -55,7 +54,7 @@
   @if (isSuccessOverlayVisible) {
   <div class="success_overlay" role="status" aria-live="polite" aria-atomic="true">
     <div class="success_overlay_content">
-      <p>The email has been sent successfully. We will contact you shortly.</p>
+      <p>{{ content().successMessage }}</p>
     </div>
   </div>
   }

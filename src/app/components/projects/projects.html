@@ -1,9 +1,9 @@
 <div class="wrapper">
     <section id="projects" class="content-shell section-space">
-        <h3>Portfolio</h3>
-        <h1>Featured Projects</h1>
-        <p>Explore a selection of my work here - interact with </p>
-        <p> projects to see my skills in action.</p>
+        <h3>{{ content().sectionLabel }}</h3>
+        <h1>{{ content().sectionTitle }}</h1>
+        <p>{{ content().sectionLineOne }}</p>
+        <p>{{ content().sectionLineTwo }}</p>
         <div class="projects_section">
             <div class="projects_box">
                 @for (project of projects; track project.name; let i = $index) {
@@ -30,8 +30,8 @@
 
         </div>
         @if (isClicked) {
-        <app-dialog class="dialog_class" [projectDialog]="currentPreview" (closeDialog)="handleClose()"
-  (nextProject)="handleNextProject()"></app-dialog>
+        <app-dialog class="dialog_class" [projectDialog]="currentPreview()" [projectDescriptionTitle]="content().dialogQuestion"
+            (closeDialog)="handleClose()" (nextProject)="handleNextProject()"></app-dialog>
         }
     </section>
 </div>
