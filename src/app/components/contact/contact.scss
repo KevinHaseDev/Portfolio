@@ -105,6 +105,19 @@ form {
     outline: 2px solid #00bfa6;
 }
 
+.contact-form input:not([type="checkbox"]).input_error,
+.contact-form textarea.input_error {
+    outline: 2px solid #ff5c5c;
+}
+
+.field_error_message {
+    margin: -8px 0 12px 30px;
+    color: #ff5c5c;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.2;
+}
+
 .checkbox {
     display: flex;
     align-items: flex-start;
@@ -131,6 +144,14 @@ form {
     background-color: #1c1c1c;
     position: relative;
     cursor: pointer;
+}
+
+.checkbox input[type="checkbox"].checkbox_input_error {
+    border-color: #ff5c5c;
+}
+
+.checkbox_error_message {
+    margin-top: -24px;
 }
 
 .checkbox input[type="checkbox"]:focus {
@@ -191,7 +212,7 @@ button:disabled {
     padding: 28px 24px;
     border: 1px solid #00bfa6;
     border-radius: 18px;
-    background: #1c1c1c;
+    background-color: rgba(61, 207, 182, 0.1);
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
 
     p {
@@ -252,6 +273,10 @@ button:disabled {
         padding-left: 30px;
     }
 
+    .field_error_message {
+        margin-left: 20px;
+    }
+
     input {
         margin-left: 20px;
     }
@@ -299,6 +324,10 @@ button:disabled {
     .label_text {
         font-size: 18px;
         padding-left: 20px;
+    }
+
+    .field_error_message {
+        margin-left: 15px;
     }
 
     input {
@@ -366,6 +395,10 @@ button:disabled {
     .label_text {
         font-size: 16px;
         padding-left: 15px;
+    }
+
+    .field_error_message {
+        margin-left: 10px;
     }
 
     input {

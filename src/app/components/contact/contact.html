@@ -14,24 +14,38 @@
       <div class="seperator"></div>
       <label class="label_text" for="name">What's your name?</label>
       <input type="text" id="name" name="name" placeholder="Your name goes here" required
-        [(ngModel)]="formModel.name">
+        #nameModel="ngModel" [(ngModel)]="formModel.name" [class.input_error]="showValidationError(nameModel)">
+      @if (showValidationError(nameModel)) {
+      <p class="field_error_message">{{ getNameErrorMessage(nameModel) }}</p>
+      }
       <div class="seperator"></div>
       <label class="label_text" for="email">What's your email?</label>
       <input type="email" id="email" name="email" placeholder="youremail@email.com" required email
-        [(ngModel)]="formModel.email">
+        #emailModel="ngModel" [(ngModel)]="formModel.email" [class.input_error]="showValidationError(emailModel)">
+      @if (showValidationError(emailModel)) {
+      <p class="field_error_message">{{ getEmailErrorMessage(emailModel) }}</p>
+      }
       <div class="seperator"></div>
       <label class="label_text" for="message">How can I help you?</label>
       <textarea id="message" name="message" rows="3" placeholder="Hello Lukas, I am interested in..."
-        required [(ngModel)]="formModel.message"></textarea>
+        required #messageModel="ngModel" [(ngModel)]="formModel.message"
+        [class.input_error]="showValidationError(messageModel)"></textarea>
+      @if (showValidationError(messageModel)) {
+      <p class="field_error_message">{{ getMessageErrorMessage(messageModel) }}</p>
+      }
       <div class="seperator"></div>
       <div class="checkbox">
-        <input type="checkbox" id="privacy" name="privacy" required [(ngModel)]="formModel.privacy">
+        <input type="checkbox" id="privacy" name="privacy" required #privacyModel="ngModel"
+          [(ngModel)]="formModel.privacy" [class.checkbox_input_error]="showValidationError(privacyModel)">
         <label for="privacy">I've read the <span>privacy policy</span> and agree to the processing of my data as
           outlined.</label>
       </div>
+      @if (showValidationError(privacyModel)) {
+      <p class="field_error_message checkbox_error_message">{{ getPrivacyErrorMessage(privacyModel) }}</p>
+      }
     </div>
     <div>
-      <button type="submit" [disabled]="isSending || contactForm.invalid">
+      <button type="submit" [disabled]="isSending">
         {{ isSending ? 'Sending...' : 'Say Hello :)' }}
       </button>
     </div>
@@ -40,7 +54,7 @@
   @if (isSuccessOverlayVisible) {
   <div class="success_overlay" role="status" aria-live="polite" aria-atomic="true">
     <div class="success_overlay_content">
-      <p>E-Mail wurde abgesendet, alles ist gut.</p>
+      <p>The email has been sent successfully. We will contact you shortly.</p>
     </div>
   </div>
   }

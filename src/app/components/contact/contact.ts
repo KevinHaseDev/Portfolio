@@ -1,12 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
-
-type ContactFormModel = {
-  name: string;
-  email: string;
-  message: string;
-  privacy: boolean;
-};
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { ContactFormModel } from '../../Interfaces/contact.interface';
 
 @Component({
   selector: 'app-contact',
@@ -16,6 +10,7 @@ type ContactFormModel = {
 })
 export class Contact implements OnDestroy {
   isSending = false;
+  isSubmitAttempted = false;
   isSuccessOverlayVisible = false;
   formModel: ContactFormModel = this.createInitialFormModel();
   private successOverlayTimerId: ReturnType<typeof setTimeout> | null = null;
@@ -25,6 +20,7 @@ export class Contact implements OnDestroy {
   }
 
   async handleSubmit(contactForm: NgForm): Promise<void> {
+    this.isSubmitAttempted = true;
     if (this.isBlockedSubmission(contactForm)) {
       return;
     }
@@ -34,11 +30,55 @@ export class Contact implements OnDestroy {
   }
 
   private isBlockedSubmission(contactForm: NgForm): boolean {
-    if (this.isSending || contactForm.invalid) {
-      contactForm.control.markAllAsTouched();
+    if (this.isSending) {
+      return true;
+    }
+    if (contactForm.invalid) {
+      this.touchAllFields(contactForm);
       return true;
     }
     return false;
+  }
+
+  showValidationError(control: NgModel | null): boolean {
+    if (!control || !control.invalid) {
+      return false;
+    }
+    return control.touched || this.isSubmitAttempted;
+  }
+
+  getNameErrorMessage(control: NgModel | null): string {
+    if (!this.showValidationError(control)) {
+      return '';
+    }
+    return 'Name is missing';
+  }
+
+  getEmailErrorMessage(control: NgModel | null): string {
+    if (!this.showValidationError(control)) {
+      return '';
+    }
+    if (control?.errors?.['required']) {
+      return 'Email is missing';
+    }
+    if (control?.errors?.['email']) {
+      return 'Please enter a valid email address';
+    }
+    return 'Please check the email field';
+  }
+
+  getMessageErrorMessage(control: NgModel | null): string {
+    if (!this.showValidationError(control)) {
+      return '';
+    }
+    return 'Message is missing';
+  }
+
+  getPrivacyErrorMessage(control: NgModel | null): string {
+    if (!this.showValidationError(control)) {
+      return '';
+    }
+    return 'Please accept the privacy policy';
   }
 
   private async sendContactMessage(): Promise<void> {
@@ -91,6 +131,11 @@ export class Contact implements OnDestroy {
     let initialModel = this.createInitialFormModel();
     contactForm.resetForm(initialModel);
     this.formModel = initialModel;
+    this.isSubmitAttempted = false;
+  }
+
+  private touchAllFields(contactForm: NgForm): void {
+    contactForm.control.markAllAsTouched();
   }
 
   private showSuccessOverlay(): void {
