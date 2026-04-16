@@ -5,6 +5,7 @@ import { MainPage } from './main-page/main-page';
 import { SkillSet } from './components/skill-set/skill-set';
 import { Comments } from './components/comments/comments';
 import { AboutMe } from './components/about-me/about-me';
+import { LegalNotice } from './components/legal-notice/legal-notice';
 // import { LandingPage } from './components/landing-page/landing-page';
 
 export const routes: Routes = [
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'skills', component: SkillSet },
     { path: 'comments', component: Comments },
     { path: 'about', component: AboutMe },
+    { path: 'legal-notice', component: LegalNotice },
     // { path: 'landing', component: LandingPage }
 ];

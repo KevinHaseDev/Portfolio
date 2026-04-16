@@ -1,0 +1,160 @@
+.wrapper {
+    width: 100%;
+    background: linear-gradient(20deg, #1c1c1c 50%, #08463B);
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(40% 40% at 15% 75%, rgba(61, 207, 182, 0.08), rgba(61, 207, 182, 0));
+    pointer-events: none;
+}
+
+.legal_notice {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: clamp(48px, 8vw, 74px);
+    color: #3dcfb6;
+    letter-spacing: 1px;
+}
+
+.legal_copy {
+    margin: 56px auto 0;
+    width: min(980px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.legal_block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h2 {
+        margin: 0;
+        font-family: var(--font-sans);
+        font-size: 30px;
+        font-weight: 700;
+        color: #f3f8f7;
+    }
+
+    p {
+        margin: 0;
+        font-family: var(--font-sans);
+        font-size: 18px;
+        line-height: 1.5;
+        color: rgba(164, 227, 216, 0.9);
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        color: rgba(164, 227, 216, 0.9);
+        font-family: var(--font-sans);
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    li {
+        position: relative;
+        padding-left: 18px;
+    }
+
+    li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #3dcfb6;
+    }
+
+    a {
+        color: #3dcfb6;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}
+
+.legal_date {
+    color: rgba(164, 227, 216, 0.75);
+}
+
+@media (max-width: 1024px) {
+    .legal_copy {
+        margin-top: 48px;
+        width: min(880px, 100%);
+        gap: 22px;
+    }
+
+    .legal_block {
+        h2 {
+            font-size: 27px;
+        }
+
+        p,
+        ul {
+            font-size: 17px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .legal_copy {
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .legal_block {
+        gap: 8px;
+
+        h2 {
+            font-size: 23px;
+        }
+
+        p,
+        ul {
+            font-size: 16px;
+            line-height: 1.45;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .legal_copy {
+        margin-top: 32px;
+        gap: 18px;
+    }
+
+    .legal_block {
+        h2 {
+            font-size: 20px;
+        }
+
+        p,
+        ul {
+            font-size: 15px;
+        }
+
+        li {
+            padding-left: 15px;
+        }
+    }
+}

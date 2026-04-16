@@ -51,6 +51,12 @@ export class Contact implements OnDestroy {
     if (!this.showValidationError(control)) {
       return '';
     }
+    if (control?.errors?.['required']) {
+      return 'Name is missing';
+    }
+    if (control?.errors?.['pattern']) {
+      return 'Name must not contain numbers';
+    }
     return 'Name is missing';
   }
 
@@ -71,7 +77,7 @@ export class Contact implements OnDestroy {
     if (!this.showValidationError(control)) {
       return '';
     }
-    return 'Message is missing';
+    return 'What do you need to develop?';
   }
 
   getPrivacyErrorMessage(control: NgModel | null): string {

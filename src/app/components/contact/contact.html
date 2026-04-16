@@ -14,7 +14,8 @@
       <div class="seperator"></div>
       <label class="label_text" for="name">What's your name?</label>
       <input type="text" id="name" name="name" placeholder="Your name goes here" required
-        #nameModel="ngModel" [(ngModel)]="formModel.name" [class.input_error]="showValidationError(nameModel)">
+        pattern="^(?=.*[A-Za-z])[A-Za-z\s'-]+$" #nameModel="ngModel" [(ngModel)]="formModel.name"
+        [class.input_error]="showValidationError(nameModel)">
       @if (showValidationError(nameModel)) {
       <p class="field_error_message">{{ getNameErrorMessage(nameModel) }}</p>
       }
