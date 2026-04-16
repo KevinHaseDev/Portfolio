@@ -1,0 +1,248 @@
+{
+	"header": {
+		"sections": {
+			"about": "Über mich",
+			"skills": "Fähigkeiten",
+			"projects": "Projekte",
+			"comments": "Kommentare",
+			"contact": "Kontakt"
+		},
+		"aria": {
+			"menuOpen": "Menü öffnen",
+			"menuClose": "Menü schließen",
+			"navigation": "Hauptnavigation",
+			"switchToGerman": "Sprache auf Deutsch umstellen",
+			"switchToEnglish": "Sprache auf Englisch umstellen",
+			"homeButton": "Zur Startsektion navigieren",
+			"logoAlt": "Portfolio-Logo"
+		}
+	},
+	"landingPage": {
+		"roleTitle": "Frontend Entwickler",
+		"checkWorkButton": "Meine Projekte",
+		"contactButton": "Kontakt aufnehmen",
+		"bannerItems": [
+			"Verfügbar für Remote-Arbeit",
+			"Fullstack Entwickler",
+			"In Thüringen",
+			"Offen für Projekte"
+		]
+	},
+	"aboutMe": {
+		"subtitle": "Wer ich bin",
+		"title": "Über mich",
+		"introduction": "Hi, ich bin Kevin! Ich liebe das Programmieren, weil ich damit aus dem Nichts etwas erschaffen kann. Es ist, als würde ich Ideen in reale Lösungen verwandeln. Technologie entwickelt sich ständig weiter und genau das hält mich neugierig. Am meisten motiviert mich, wenn mein Code wirklich funktioniert und einen Unterschied macht, auch im Kleinen. Jedes Projekt bringt neue Erkenntnisse und hilft mir, besser zu werden.",
+		"locationText": "Ich lebe aktuell in Meiningen, Deutschland, gemeinsam mit meiner Familie und meinen drei Kindern. Ein Umzug kommt für mich derzeit nicht infrage, aber ich bin komplett offen für Remote-Arbeit und lege großen Wert auf Teamarbeit über Distanz. Ich arbeite gerne mit Menschen aus unterschiedlichen Hintergründen zusammen und bin überzeugt, dass starke Ergebnisse von überall entstehen können.",
+		"mindsetText": "Ich bin ein offener Entwickler, der neue Technologien gerne ausprobiert und sein Wissen stetig erweitert. Die schnelle Entwicklung in der IT motiviert mich, neugierig zu bleiben, kontinuierlich zu lernen und mich schnell an neue Tools und Frameworks anzupassen.",
+		"problemSolvingText": "Mein Ansatz beim Lösen von Problemen verbindet analytisches Denken, Kreativität und Ausdauer. Ich sehe jede Herausforderung als Chance, mein Verständnis zu vertiefen und effizienter zu arbeiten. Besonders gerne arbeite ich im Team an eleganten und skalierbaren Lösungen, die nicht nur funktionieren, sondern auch sauber umgesetzt sind."
+	},
+	"skillSet": {
+		"subtitle": "Technologien",
+		"title": "Fähigkeiten",
+		"description": "Ich bin Frontend-Entwickler mit praktischer Erfahrung in modernen Webtechnologien wie HTML, CSS, JavaScript, TypeScript und Angular sowie in Tools und Frameworks für responsive und dynamische Benutzeroberflächen. Ich entwickle gerne saubere, barrierearme und performante Webanwendungen mit starkem Nutzerfokus.\n\nIch bin sehr anpassungsfähig und lerne kontinuierlich neue Technologien, um mit der schnellen Entwicklung im Webbereich Schritt zu halten. Aktuelle Trends, Best Practices und moderne Werkzeuge sind ein fester Teil meines Workflows. So verbessere ich mich stetig und liefere Lösungen, die heutigen Standards entsprechen.",
+		"needAnotherSkillText": "Du brauchst noch eine weitere Fähigkeit?",
+		"contactPrompt": "Melde dich gerne bei mir. Ich freue mich darauf, mein Wissen in neuen Projekten einzubringen und zu erweitern.",
+		"talkButton": "Lass uns sprechen"
+	},
+	"projects": {
+		"content": {
+			"sectionLabel": "Portfolio",
+			"sectionTitle": "Ausgewählte Projekte",
+			"sectionLineOne": "Hier findest du eine Auswahl meiner Arbeiten. Interagiere mit den",
+			"sectionLineTwo": "Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+			"dialogQuestion": "Worum geht es in diesem Projekt?"
+		},
+		"dialogs": [
+			{
+				"id": "infoDialog",
+				"title": "01",
+				"name": "Join",
+				"description": "Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-drop, weise Nutzer zu und strukturiere Workflows mit Kategorien.",
+				"technologies": [
+					{ "name": "CSS", "icon": "./assets/icons/Projects/CSS.svg" },
+					{ "name": "HTML", "icon": "./assets/icons/Projects/html.svg" },
+					{ "name": "Firebase", "icon": "./assets/icons/Projects/Firebase.svg" },
+					{ "name": "Angular", "icon": "./assets/icons/Projects/Angular.svg" },
+					{ "name": "Typescript", "icon": "./assets/icons/Projects/Typescript.svg" }
+				],
+				"actions": {
+					"github": {
+						"label": "GitHub",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://github.com/Younes-Darabi/join-project"
+					},
+					"liveTest": {
+						"label": "Live ansehen",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://join-1351.developerakademie.net/index.html"
+					}
+				},
+				"footer": {
+					"closeLabel": "Schließen",
+					"previewImage": "./assets/img/projects/join.svg",
+					"nextProject": {
+						"label": "Nächstes Projekt",
+						"icon": "./assets/icons/Projects/arrow_forward.svg"
+					}
+				}
+			},
+			{
+				"id": "infoDialog",
+				"title": "02",
+				"name": "El Pollo Loco",
+				"description": "Jump-and-run-Spiel auf objektorientierter Basis. Hilf Pepe dabei, Münzen und Tabasco zu sammeln, um die verrückte Henne zu besiegen.",
+				"technologies": [
+					{ "name": "CSS", "icon": "./assets/icons/Projects/CSS.svg" },
+					{ "name": "HTML", "icon": "./assets/icons/Projects/html.svg" },
+					{ "name": "Javascript", "icon": "./assets/icons/Projects/Javascript.svg" }
+				],
+				"actions": {
+					"github": {
+						"label": "GitHub",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://github.com/KevinHaseDev/El-Pollo-Loco.git"
+					},
+					"liveTest": {
+						"label": "Live ansehen",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://kevin-hase.developerakademie.net/El%20Pollo%20Loco/index.html"
+					}
+				},
+				"footer": {
+					"closeLabel": "Schließen",
+					"previewImage": "./assets/img/projects/el_pollo_loco.svg",
+					"nextProject": {
+						"label": "Nächstes Projekt",
+						"icon": "./assets/icons/Projects/arrow_forward.svg"
+					}
+				}
+			},
+			{
+				"id": "infoDialog",
+				"title": "03",
+				"name": "PokeDex",
+				"description": "Interaktive Pokemon-Enzyklopädie auf API-basierter Architektur. Suche, filtere und entdecke Pokemon in Echtzeit mit Daten aus der PokeAPI.",
+				"technologies": [
+					{ "name": "CSS", "icon": "./assets/icons/Projects/CSS.svg" },
+					{ "name": "HTML", "icon": "./assets/icons/Projects/html.svg" },
+					{ "name": "Javascript", "icon": "./assets/icons/Projects/Javascript.svg" }
+				],
+				"actions": {
+					"github": {
+						"label": "GitHub",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://github.com/KevinHaseDev/Pokedex.git"
+					},
+					"liveTest": {
+						"label": "Live ansehen",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://kevin-hase.developerakademie.net/Pokedex/index.html"
+					}
+				},
+				"footer": {
+					"closeLabel": "Schließen",
+					"previewImage": "./assets/img/projects/Pokedex_screen.jpg",
+					"nextProject": {
+						"label": "Nächstes Projekt",
+						"icon": "./assets/icons/Projects/arrow_forward.svg"
+					}
+				}
+			}
+		]
+	},
+	"comments": {
+		"heading": "Was meine Kolleginnen und Kollegen über mich sagen",
+		"items": [
+			{
+				"comment": "Kevin ist ein sehr zuverlässiger und engagierter Teamkollege. Er organisiert seine Zeit hervorragend, arbeitet selbstständig wie auch im Team sehr effektiv und ist stets pünktlich. Zudem ist er jederzeit hilfsbereit.",
+				"name": "Anastasia Tsypkaykina"
+			},
+			{
+				"comment": "Kevin hat durch seine klare Kommunikation, sein breites Fachwissen und seine schnelle Auffassungsgabe wesentlich zum Projekterfolg beigetragen. Wenn Unterstützung gebraucht wurde, war er immer zur Stelle.",
+				"name": "Imra Skaliks"
+			},
+			{
+				"comment": "Kevin war ein außergewöhnlich geduldiger und unterstützender Teamkollege, der das Team konstant begleitet und bei Bedarf klare Orientierung gegeben hat. Seine Präsenz hat ein positives, kollaboratives Arbeitsklima geschaffen, und ich würde jederzeit wieder mit ihm zusammenarbeiten.",
+				"name": "Younes Darabi"
+			}
+		]
+	},
+	"contact": {
+		"sectionTitle": "Kontakt",
+		"sectionHeadlineLineOne": "Lass uns",
+		"sectionHeadlineLineTwo": "zusammenarbeiten",
+		"problemHeadline": "Du hast ein Problem zu lösen?",
+		"introductionText": "Erzähl mir, bei welcher Rolle du Unterstützung brauchst und welche Herausforderung du lösen willst. Ich helfe dir gerne dabei, dein Projekt voranzubringen.",
+		"frontendPromptText": "Du brauchst einen Frontend-Entwickler?",
+		"frontendPromptHighlight": " Lass uns sprechen!",
+		"nameLabel": "Wie ist dein Name?",
+		"namePlaceholder": "Dein Name",
+		"emailLabel": "Wie lautet deine E-Mail?",
+		"emailPlaceholder": "deinemail@email.de",
+		"messageLabel": "Wie kann ich dir helfen?",
+		"messagePlaceholder": "Hallo Kevin, ich interessiere mich für...",
+		"privacyLabelPrefix": "Ich habe die",
+		"privacyPolicyLabel": "Datenschutzerklärung",
+		"privacyLabelSuffix": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+		"sendingButtonText": "Wird gesendet...",
+		"submitButtonText": "Nachricht senden",
+		"successMessage": "Die Nachricht wurde erfolgreich gesendet. Ich melde mich in Kürze bei dir.",
+		"nameMissingError": "Name fehlt",
+		"namePatternError": "Der Name darf keine Zahlen enthalten",
+		"emailMissingError": "E-Mail fehlt",
+		"emailFormatError": "Bitte gib eine gültige E-Mail-Adresse ein",
+		"emailInvalidError": "Bitte prüfe das E-Mail-Feld",
+		"messageMissingError": "Was soll entwickelt werden?",
+		"privacyMissingError": "Bitte akzeptiere die Datenschutzerklärung"
+	},
+	"footer": {
+		"role": "Webentwickler",
+		"location": "Thüringen, Deutschland",
+		"emailLinkLabel": "E-Mail",
+		"legalNoticeLinkLabel": "Impressum"
+	},
+	"legalNotice": {
+		"pageTitle": "Impressum",
+		"imprintTitle": "Anbieterkennzeichnung",
+		"locationText": "Thüringen, Deutschland",
+		"emailLabel": "E-Mail",
+		"acceptanceTitle": "Geltung der Bedingungen",
+		"acceptanceText": "Mit dem Zugriff auf dieses Portfolio bestätigst du die folgenden Bedingungen. Diese Bedingungen können jederzeit ohne gesonderte Vorankündigung aktualisiert werden.",
+		"scopeTitle": "Zweck und Eigentum am Produkt",
+		"scopeText": "Dieses Portfolio dient ausschließlich der professionellen Darstellung. Design, Codebeispiele und Inhalte sind Teil einer persönlichen Webpräsenz, sofern nicht anders gekennzeichnet.",
+		"rightsTitle": "Schutzrechte",
+		"rightsText": "Gestaltung und Struktur unterliegen dem Schutz geistiger Eigentumsrechte. Eine unbefugte Wiederverwendung, Vervielfältigung oder Weitergabe der Inhalte ist nicht gestattet.",
+		"useTitle": "Nutzung des Produkts",
+		"useText": "Die Nutzung dieser Webseite ist nur zu rechtmäßigen Zwecken erlaubt. Versuche, die Seite oder Kontaktkanäle zu beschädigen, zu manipulieren oder missbräuchlich zu verwenden, sind untersagt.",
+		"disclaimerTitle": "Haftungsausschluss und Haftungsbegrenzung",
+		"disclaimerText": "Dieses Portfolio wird ohne Gewähr bereitgestellt. Für externe Links, Dienste Dritter oder mittelbare Schäden, die aus der Nutzung dieser Webseite entstehen, wird keine Haftung übernommen.",
+		"indemnityTitle": "Freistellung",
+		"indemnityText": "Du verpflichtest dich, den Seitenbetreiber von Ansprüchen, Schäden oder rechtlichen Kosten freizustellen, die durch missbräuchliche Nutzung oder Verstoß gegen diese Bedingungen entstehen.",
+		"inquiryText": "Für rechtliche Anfragen kontaktiere bitte",
+		"dateLabel": "Stand: 16. April 2026"
+	},
+	"privacyPolicy": {
+		"pageTitle": "Datenschutzerklärung",
+		"controllerTitle": "1. Verantwortliche Stelle",
+		"controllerText": "Verantwortlich für die Datenverarbeitung auf dieser Webseite ist Kevin Hase, Thüringen, Deutschland. Kontakt:",
+		"dataTitle": "2. Verarbeitete Daten",
+		"dataText": "Beim Besuch dieser Webseite können technische Zugriffsdaten durch Hosting-Anbieter verarbeitet werden, darunter IP-Adresse, Browserinformationen und Zugriffszeit.",
+		"contactFormTitle": "3. Kontaktformular",
+		"contactFormText": "Wenn du das Kontaktformular absendest, verarbeiten wir deinen Namen, deine E-Mail-Adresse und deinen Nachrichtentext, um auf deine Anfrage zu reagieren. Grundlage ist deine initiierte Kommunikation.",
+		"purposeTitle": "4. Zweck und Rechtsgrundlage",
+		"purposeText": "Die Datenverarbeitung erfolgt ausschließlich zur Bereitstellung dieser Webseite, zur Gewährleistung der technischen Sicherheit und zur Bearbeitung von Kontaktanfragen. Rechtsgrundlagen können Einwilligung, vorvertragliche Kommunikation und berechtigtes Interesse am sicheren Betrieb der Webseite sein.",
+		"storageTitle": "5. Speicherdauer",
+		"storageText": "Personenbezogene Daten werden nur so lange gespeichert, wie es für den jeweiligen Zweck oder gesetzliche Pflichten erforderlich ist. Anschließend werden sie gelöscht oder anonymisiert.",
+		"rightsTitle": "6. Deine Rechte",
+		"rightsItems": [
+			"Recht auf Auskunft über gespeicherte Daten",
+			"Recht auf Berichtigung unrichtiger Daten",
+			"Recht auf Löschung und Einschränkung der Verarbeitung",
+			"Recht auf Datenübertragbarkeit, soweit anwendbar",
+			"Recht auf Widerspruch gegen die Datenverarbeitung"
+		],
+		"requestContactTitle": "7. Kontakt bei Datenschutzanfragen",
+		"requestContactText": "Bei allen Fragen rund um Datenschutz und Datensicherheit kontaktiere bitte:",
+		"lastUpdateLabel": "Stand: 16. April 2026"
+	}
+}

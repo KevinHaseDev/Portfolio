@@ -2,7 +2,7 @@ import { Component, OnDestroy, computed, inject } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { ContactFormModel } from '../../Interfaces/contact.interface';
 import { RouterLink } from "@angular/router";
-import { AppLanguage, LanguageService } from '../../services/language.service';
+import { LanguageService } from '../../services/language.service';
 
 type ContactContent = {
   sectionTitle: string;
@@ -42,68 +42,8 @@ type ContactContent = {
 export class Contact implements OnDestroy {
   private languageService = inject(LanguageService);
 
-  private contentByLanguage: Record<AppLanguage, ContactContent> = {
-    en: {
-      sectionTitle: 'Contact me',
-      sectionHeadlineLineOne: 'Let\'s work',
-      sectionHeadlineLineTwo: 'together',
-      problemHeadline: 'Got a problem to solve?',
-      introductionText: 'Tell me what role you need support for and what challenge you want to solve. I am happy to help bring your project forward.',
-      frontendPromptText: 'Need a Frontend developer?',
-      frontendPromptHighlight: ' Let\'s talk!',
-      nameLabel: 'What\'s your name?',
-      namePlaceholder: 'Your name goes here',
-      emailLabel: 'What\'s your email?',
-      emailPlaceholder: 'youremail@email.com',
-      messageLabel: 'How can I help you?',
-      messagePlaceholder: 'Hello Kevin, I am interested in...',
-      privacyLabelPrefix: 'I\'ve read the',
-      privacyPolicyLabel: 'privacy policy',
-      privacyLabelSuffix: 'and agree to the processing of my data as outlined.',
-      sendingButtonText: 'Sending...',
-      submitButtonText: 'Say Hello :)',
-      successMessage: 'The email has been sent successfully. I will contact you shortly.',
-      nameMissingError: 'Name is missing',
-      namePatternError: 'Name must not contain numbers',
-      emailMissingError: 'Email is missing',
-      emailFormatError: 'Please enter a valid email address',
-      emailInvalidError: 'Please check the email field',
-      messageMissingError: 'What do you need to develop?',
-      privacyMissingError: 'Please accept the privacy policy'
-    },
-    de: {
-      sectionTitle: 'Kontakt',
-      sectionHeadlineLineOne: 'Lass uns',
-      sectionHeadlineLineTwo: 'zusammenarbeiten',
-      problemHeadline: 'Du hast ein Problem zu lösen?',
-      introductionText: 'Erzähl mir, bei welcher Rolle du Unterstützung brauchst und welche Herausforderung du lösen willst. Ich helfe dir gerne dabei, dein Projekt voranzubringen.',
-      frontendPromptText: 'Du brauchst einen Frontend-Entwickler?',
-      frontendPromptHighlight: ' Lass uns sprechen!',
-      nameLabel: 'Wie ist dein Name?',
-      namePlaceholder: 'Dein Name',
-      emailLabel: 'Wie lautet deine E-Mail?',
-      emailPlaceholder: 'deinemail@email.de',
-      messageLabel: 'Wie kann ich dir helfen?',
-      messagePlaceholder: 'Hallo Kevin, ich interessiere mich für...',
-      privacyLabelPrefix: 'Ich habe die',
-      privacyPolicyLabel: 'Datenschutzerklärung',
-      privacyLabelSuffix: 'gelesen und stimme der Verarbeitung meiner Daten zu.',
-      sendingButtonText: 'Wird gesendet...',
-      submitButtonText: 'Nachricht senden',
-      successMessage: 'Die Nachricht wurde erfolgreich gesendet. Ich melde mich in Kürze bei dir.',
-      nameMissingError: 'Name fehlt',
-      namePatternError: 'Der Name darf keine Zahlen enthalten',
-      emailMissingError: 'E-Mail fehlt',
-      emailFormatError: 'Bitte gib eine gültige E-Mail-Adresse ein',
-      emailInvalidError: 'Bitte prüfe das E-Mail-Feld',
-      messageMissingError: 'Was soll entwickelt werden?',
-      privacyMissingError: 'Bitte akzeptiere die Datenschutzerklärung'
-    }
-  };
-
   content = computed(() => {
-    let currentLanguage = this.languageService.currentLanguage();
-    return this.contentByLanguage[currentLanguage];
+    return this.languageService.getTranslationByLanguage<ContactContent>('contact');
   });
 
   isSending = false;

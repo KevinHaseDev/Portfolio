@@ -4,11 +4,9 @@ import { AppLanguage, LanguageService } from '../../services/language.service';
 
 type NavigationSection = {
   id: string;
-  labelByLanguage: {
-    en: string;
-    de: string;
-  };
 };
+
+type HeaderSectionLabels = Record<string, string>;
 
 @Component({
   selector: 'app-header',
@@ -25,41 +23,11 @@ export class Header implements AfterViewInit {
   activeSectionId = 'home';
 
   sections: NavigationSection[] = [
-    {
-      id: 'about',
-      labelByLanguage: {
-        en: 'About me',
-        de: 'Über mich'
-      }
-    },
-    {
-      id: 'skills',
-      labelByLanguage: {
-        en: 'Skills',
-        de: 'Fähigkeiten'
-      }
-    },
-    {
-      id: 'projects',
-      labelByLanguage: {
-        en: 'Projects',
-        de: 'Projekte'
-      }
-    },
-    {
-      id: 'comments',
-      labelByLanguage: {
-        en: 'Comments',
-        de: 'Kommentare'
-      }
-    },
-    {
-      id: 'contact',
-      labelByLanguage: {
-        en: 'Contact',
-        de: 'Kontakt'
-      }
-    }
+    { id: 'about' },
+    { id: 'skills' },
+    { id: 'projects' },
+    { id: 'comments' },
+    { id: 'contact' }
   ];
 
   ngAfterViewInit(): void {
@@ -91,13 +59,13 @@ export class Header implements AfterViewInit {
     this.isMenuOpen = false;
   }
 
-  onLanguageSwitchChange(event: Event): void {
+  async onLanguageSwitchChange(event: Event): Promise<void> {
     let languageToggle = event.target as HTMLInputElement | null;
     if (!languageToggle) {
       return;
     }
     let nextLanguage: AppLanguage = languageToggle.checked ? 'de' : 'en';
-    this.languageService.setLanguage(nextLanguage);
+    await this.languageService.setLanguage(nextLanguage);
   }
 
   isGermanLanguageActive(): boolean {
@@ -105,48 +73,37 @@ export class Header implements AfterViewInit {
   }
 
   getSectionLabel(section: NavigationSection): string {
-    let currentLanguage = this.languageService.currentLanguage();
-    return section.labelByLanguage[currentLanguage];
+    let sectionLabels = this.languageService.getTranslationByLanguage<HeaderSectionLabels>(
+      'header.sections'
+    );
+    return sectionLabels[section.id] ?? '';
   }
 
   getMenuToggleAriaLabel(): string {
-    let currentLanguage = this.languageService.currentLanguage();
-    if (currentLanguage === 'de') {
-      return this.isMenuOpen ? 'Menü schließen' : 'Menü öffnen';
+    if (this.isMenuOpen) {
+      return this.languageService.getTranslationByLanguage<string>('header.aria.menuClose');
     }
-    return this.isMenuOpen ? 'Close menu' : 'Open menu';
+    return this.languageService.getTranslationByLanguage<string>('header.aria.menuOpen');
   }
 
   getNavigationAriaLabel(): string {
-    let currentLanguage = this.languageService.currentLanguage();
-    if (currentLanguage === 'de') {
-      return 'Hauptnavigation';
-    }
-    return 'Primary navigation';
+    return this.languageService.getTranslationByLanguage<string>('header.aria.navigation');
   }
 
   getLanguageSwitchAriaLabel(): string {
     let currentLanguage = this.languageService.currentLanguage();
     if (currentLanguage === 'de') {
-      return 'Sprache auf Englisch umstellen';
+      return this.languageService.getTranslationByLanguage<string>('header.aria.switchToEnglish');
     }
-    return 'Switch language to German';
+    return this.languageService.getTranslationByLanguage<string>('header.aria.switchToGerman');
   }
 
   getHomeButtonAriaLabel(): string {
-    let currentLanguage = this.languageService.currentLanguage();
-    if (currentLanguage === 'de') {
-      return 'Zur Startsektion navigieren';
-    }
-    return 'Navigate to home section';
+    return this.languageService.getTranslationByLanguage<string>('header.aria.homeButton');
   }
 
   getLogoAltText(): string {
-    let currentLanguage = this.languageService.currentLanguage();
-    if (currentLanguage === 'de') {
-      return 'Portfolio Logo';
-    }
-    return 'Portfolio logo';
+    return this.languageService.getTranslationByLanguage<string>('header.aria.logoAlt');
   }
 
   async navigateToSection(sectionId: string): Promise<void> {

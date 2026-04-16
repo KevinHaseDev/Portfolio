@@ -1,0 +1,248 @@
+{
+	"header": {
+		"sections": {
+			"about": "About me",
+			"skills": "Skills",
+			"projects": "Projects",
+			"comments": "Comments",
+			"contact": "Contact"
+		},
+		"aria": {
+			"menuOpen": "Open menu",
+			"menuClose": "Close menu",
+			"navigation": "Primary navigation",
+			"switchToGerman": "Switch language to German",
+			"switchToEnglish": "Switch language to English",
+			"homeButton": "Navigate to home section",
+			"logoAlt": "Portfolio logo"
+		}
+	},
+	"landingPage": {
+		"roleTitle": "Frontend Developer",
+		"checkWorkButton": "Check my work",
+		"contactButton": "Contact me",
+		"bannerItems": [
+			"Available for remote work",
+			"Fullstack Developer",
+			"Based in Thuringia",
+			"Open to projects"
+		]
+	},
+	"aboutMe": {
+		"subtitle": "Who I Am",
+		"title": "About Me",
+		"introduction": "Hi, I'm Kevin! I love coding because it allows me to create things from nothing, it's like turning ideas into reality. Technology never stops evolving, and that keeps me curious. What inspires me most is seeing my code actually work and make a difference, even in small ways. Every project teaches me something new and pushes me to improve.",
+		"locationText": "I'm currently based in Meiningen, Germany, where I live with my family and three children. While relocation isn't possible for me, I'm fully open to remote opportunities and highly value teamwork and collaboration across distances. I enjoy working with diverse professionals from different backgrounds and believe that great results can be achieved from anywhere.",
+		"mindsetText": "I'm an open-minded developer who's always eager to explore new technologies and expand my skill set. The fast-paced nature of the IT world motivates me to stay curious, keep learning, and adapt quickly to emerging tools and frameworks.",
+		"problemSolvingText": "My approach to problem-solving combines analytical thinking, creativity, and persistence. I see every challenge as a learning opportunity to refine my understanding and improve my efficiency. I enjoy collaborating with others to find elegant and scalable solutions that not only work but work beautifully."
+	},
+	"skillSet": {
+		"subtitle": "Technologies",
+		"title": "Skill Set",
+		"description": "I'm a front-end developer with hands-on experience in modern web technologies such as HTML, CSS, JavaScript, TypeScript, and Angular, as well as frameworks and tools that support responsive and dynamic user interfaces. I enjoy building clean, accessible, and performant web applications that deliver great user experiences.\n\nI'm highly adaptable and always eager to learn new technologies, keeping pace with the fast-evolving world of web development. Staying up to date with the latest trends, best practices, and tools is a key part of my workflow. It helps me continuously improve my craft and deliver solutions that meet current industry standards.",
+		"needAnotherSkillText": "You need another skill?",
+		"contactPrompt": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+		"talkButton": "Let's talk"
+	},
+	"projects": {
+		"content": {
+			"sectionLabel": "Portfolio",
+			"sectionTitle": "Featured Projects",
+			"sectionLineOne": "Explore a selection of my work here and interact with",
+			"sectionLineTwo": "projects to see my skills in action.",
+			"dialogQuestion": "What is this project about?"
+		},
+		"dialogs": [
+			{
+				"id": "infoDialog",
+				"title": "01",
+				"name": "Join",
+				"description": "Task manager inspired by the Kanban system. Create and organize tasks with drag and drop, assign users, and structure work with categories.",
+				"technologies": [
+					{ "name": "CSS", "icon": "./assets/icons/Projects/CSS.svg" },
+					{ "name": "HTML", "icon": "./assets/icons/Projects/html.svg" },
+					{ "name": "Firebase", "icon": "./assets/icons/Projects/Firebase.svg" },
+					{ "name": "Angular", "icon": "./assets/icons/Projects/Angular.svg" },
+					{ "name": "Typescript", "icon": "./assets/icons/Projects/Typescript.svg" }
+				],
+				"actions": {
+					"github": {
+						"label": "GitHub",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://github.com/Younes-Darabi/join-project"
+					},
+					"liveTest": {
+						"label": "Live Test",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://join-1351.developerakademie.net/index.html"
+					}
+				},
+				"footer": {
+					"closeLabel": "Close",
+					"previewImage": "./assets/img/projects/join.svg",
+					"nextProject": {
+						"label": "Next project",
+						"icon": "./assets/icons/Projects/arrow_forward.svg"
+					}
+				}
+			},
+			{
+				"id": "infoDialog",
+				"title": "02",
+				"name": "El Pollo Loco",
+				"description": "Jump-and-run game based on an object-oriented approach. Help Pepe collect coins and tabasco to defeat the crazy hen.",
+				"technologies": [
+					{ "name": "CSS", "icon": "./assets/icons/Projects/CSS.svg" },
+					{ "name": "HTML", "icon": "./assets/icons/Projects/html.svg" },
+					{ "name": "Javascript", "icon": "./assets/icons/Projects/Javascript.svg" }
+				],
+				"actions": {
+					"github": {
+						"label": "GitHub",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://github.com/KevinHaseDev/El-Pollo-Loco.git"
+					},
+					"liveTest": {
+						"label": "Live Test",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://kevin-hase.developerakademie.net/El%20Pollo%20Loco/index.html"
+					}
+				},
+				"footer": {
+					"closeLabel": "Close",
+					"previewImage": "./assets/img/projects/el_pollo_loco.svg",
+					"nextProject": {
+						"label": "Next project",
+						"icon": "./assets/icons/Projects/arrow_forward.svg"
+					}
+				}
+			},
+			{
+				"id": "infoDialog",
+				"title": "03",
+				"name": "PokeDex",
+				"description": "Interactive Pokemon encyclopedia based on an API-driven architecture. Search, filter, and explore Pokemon in real time with data from the PokeAPI.",
+				"technologies": [
+					{ "name": "CSS", "icon": "./assets/icons/Projects/CSS.svg" },
+					{ "name": "HTML", "icon": "./assets/icons/Projects/html.svg" },
+					{ "name": "Javascript", "icon": "./assets/icons/Projects/Javascript.svg" }
+				],
+				"actions": {
+					"github": {
+						"label": "GitHub",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://github.com/KevinHaseDev/Pokedex.git"
+					},
+					"liveTest": {
+						"label": "Live Test",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://kevin-hase.developerakademie.net/Pokedex/index.html"
+					}
+				},
+				"footer": {
+					"closeLabel": "Close",
+					"previewImage": "./assets/img/projects/Pokedex_screen.jpg",
+					"nextProject": {
+						"label": "Next project",
+						"icon": "./assets/icons/Projects/arrow_forward.svg"
+					}
+				}
+			}
+		]
+	},
+	"comments": {
+		"heading": "What my colleagues say about me",
+		"items": [
+			{
+				"comment": "Kevin is a highly reliable and dedicated team member. He manages his time very well, works equally effectively independently and within a team, and is always punctual. In addition, he is a very helpful person.",
+				"name": "Anastasia Tsypkaykina"
+			},
+			{
+				"comment": "Kevin made a significant contribution to the success of our project thanks to his clear communication, extensive knowledge, and quick grasp of new concepts. He was also always willing to lend a hand whenever help was needed.",
+				"name": "Imra Skaliks"
+			},
+			{
+				"comment": "Kevin was an exceptionally patient and supportive teammate who consistently helped the team and provided clear guidance when needed. His presence created a positive and collaborative environment, and I would be very happy to work with him again.",
+				"name": "Younes Darabi"
+			}
+		]
+	},
+	"contact": {
+		"sectionTitle": "Contact me",
+		"sectionHeadlineLineOne": "Let's work",
+		"sectionHeadlineLineTwo": "together",
+		"problemHeadline": "Got a problem to solve?",
+		"introductionText": "Tell me what role you need support for and what challenge you want to solve. I am happy to help bring your project forward.",
+		"frontendPromptText": "Need a Frontend developer?",
+		"frontendPromptHighlight": " Let's talk!",
+		"nameLabel": "What's your name?",
+		"namePlaceholder": "Your name goes here",
+		"emailLabel": "What's your email?",
+		"emailPlaceholder": "youremail@email.com",
+		"messageLabel": "How can I help you?",
+		"messagePlaceholder": "Hello Kevin, I am interested in...",
+		"privacyLabelPrefix": "I've read the",
+		"privacyPolicyLabel": "privacy policy",
+		"privacyLabelSuffix": "and agree to the processing of my data as outlined.",
+		"sendingButtonText": "Sending...",
+		"submitButtonText": "Say Hello :)",
+		"successMessage": "The email has been sent successfully. I will contact you shortly.",
+		"nameMissingError": "Name is missing",
+		"namePatternError": "Name must not contain numbers",
+		"emailMissingError": "Email is missing",
+		"emailFormatError": "Please enter a valid email address",
+		"emailInvalidError": "Please check the email field",
+		"messageMissingError": "What do you need to develop?",
+		"privacyMissingError": "Please accept the privacy policy"
+	},
+	"footer": {
+		"role": "Web Developer",
+		"location": "Thuringia, Germany",
+		"emailLinkLabel": "Email",
+		"legalNoticeLinkLabel": "Legal Notice"
+	},
+	"legalNotice": {
+		"pageTitle": "Legal Notice",
+		"imprintTitle": "Imprint",
+		"locationText": "Thuringia, Germany",
+		"emailLabel": "Email",
+		"acceptanceTitle": "Acceptance of Terms",
+		"acceptanceText": "By accessing and using this portfolio, you acknowledge and agree to the following terms and conditions. These terms may be updated from time to time without prior notice.",
+		"scopeTitle": "Scope and Ownership of the Product",
+		"scopeText": "This portfolio is presented for professional showcase purposes. All design, code snippets, and written content are part of a personal web presence unless otherwise stated.",
+		"rightsTitle": "Proprietary Rights",
+		"rightsText": "The overall design and structure are protected by intellectual property rights. Unauthorized reuse, duplication, or redistribution of content is not permitted.",
+		"useTitle": "Use of the Product",
+		"useText": "You may use this website only for lawful purposes. Any attempt to damage, manipulate, or misuse the site or contact channels is strictly prohibited.",
+		"disclaimerTitle": "Disclaimer and Limitation of Liability",
+		"disclaimerText": "This portfolio is provided as is, without warranties of any kind. No liability is assumed for external links, third-party services, or incidental damages resulting from the use of this website.",
+		"indemnityTitle": "Indemnity",
+		"indemnityText": "You agree to indemnify and hold harmless the site owner against claims, damages, or legal costs arising from misuse of this website or violation of these terms.",
+		"inquiryText": "For legal inquiries, please contact",
+		"dateLabel": "Date: April 16, 2026"
+	},
+	"privacyPolicy": {
+		"pageTitle": "Privacy Policy",
+		"controllerTitle": "1. Controller",
+		"controllerText": "Responsible for data processing on this website is Kevin Hase, Thuringia, Germany. Contact:",
+		"dataTitle": "2. Data We Process",
+		"dataText": "When you visit this website, technical access data may be processed by hosting providers, including IP address, browser information, and access time.",
+		"contactFormTitle": "3. Contact Form",
+		"contactFormText": "If you submit the contact form, we process your name, email address, and message content to respond to your request. Processing is based on your initiated communication.",
+		"purposeTitle": "4. Purpose and Legal Basis",
+		"purposeText": "Data is processed solely to provide this website, ensure technical security, and handle contact requests. Legal bases may include consent, pre-contractual communication, and legitimate interest in secure website operation.",
+		"storageTitle": "5. Storage Duration",
+		"storageText": "Personal data is stored only as long as necessary for the stated purpose or legal obligations. Once storage is no longer required, data is deleted or anonymized.",
+		"rightsTitle": "6. Your Rights",
+		"rightsItems": [
+			"Right of access to your stored data",
+			"Right to rectification of incorrect data",
+			"Right to erasure and restriction of processing",
+			"Right to data portability where applicable",
+			"Right to object to data processing"
+		],
+		"requestContactTitle": "7. Contact for Privacy Requests",
+		"requestContactText": "For all questions related to privacy and data protection, contact:",
+		"lastUpdateLabel": "Last update: April 16, 2026"
+	}
+}
