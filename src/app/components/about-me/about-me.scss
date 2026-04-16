@@ -70,6 +70,7 @@ span {
 .aboutMe {
     border: 1px solid #3DCFB6;
     border-radius: 20px;
+    background-color: rgba(61, 207, 182, 0.1);
     padding: 20px;
     margin: 20px;
     height: auto;
@@ -78,6 +79,7 @@ span {
     max-width: 100%;
 
     >h2 {
+        display: flex;
         color: #3DCFB6;
         font-family: var(--font-mono);
         font-size: 64px;
