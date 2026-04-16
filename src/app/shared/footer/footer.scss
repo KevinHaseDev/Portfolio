@@ -10,7 +10,7 @@
     align-items: center;
     padding: 60px;
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: var(--content-max-width);
 }
 
 .footer-left {

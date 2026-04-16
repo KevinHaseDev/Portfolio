@@ -3,9 +3,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
     height: 100vh;
-    max-width: 100%;
+    max-width: var(--content-max-width);
     background: linear-gradient(20deg, #1c1c1c 50%, #08463B);
 
 }

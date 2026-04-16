@@ -9,7 +9,7 @@ section {
     justify-content: space-around;
     color: white;
     background: radial-gradient(circle at left center, #3dcfb7, #1c1c1c 20%);
-    max-width: 1920px;
+    max-width: var(--content-max-width);
     h3 {
         font-family: var(--font-sans);
         font-size: 28px;

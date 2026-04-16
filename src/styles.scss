@@ -20,7 +20,7 @@
   --radius-lg: 30px;
   --radius-pill: 999px;
 
-  --content-max-width: 1440px;
+  --content-max-width: 1920px;
   --content-padding-inline: 120px;
 
   --breakpoint-desktop: 1024px;
@@ -57,6 +57,13 @@ a {
 
 section[id] {
   scroll-margin-top: var(--header-offset);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content-shell {
