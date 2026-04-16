@@ -2,7 +2,16 @@
 <footer class="footer">
   <div class="footer-left">
     <a routerLink="">
-    <img src="./assets/img/Monogramm3.png" alt="Monogramm" class="logo" />
+      <span class="logo_stack">
+        <picture class="logo_picture logo_picture_default">
+          <source media="(max-width: 768px)" srcset="./assets/img/Monogramm_short.png" />
+          <img src="./assets/img/Monogramm.png" alt="Monogramm" class="logo_image" />
+        </picture>
+        <picture class="logo_picture logo_picture_hover" aria-hidden="true">
+          <source media="(max-width: 768px)" srcset="./assets/img/Monogramm_hover_short.png" />
+          <img src="./assets/img/Monogramm_hover.png" alt="" class="logo_image_hover" />
+        </picture>
+      </span>
     </a>
       <span class="role">Web Developer</span>
       <span class="location">Thuringia, Germany</span>
