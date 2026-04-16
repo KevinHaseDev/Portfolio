@@ -9,28 +9,40 @@
     <p>Need a Frontend developer?<span> Let's talk!</span></p>
   </div>
 
-  <form>
+  <form #contactForm="ngForm" (ngSubmit)="handleSubmit(contactForm)" novalidate>
     <div class="contact-form">
       <div class="seperator"></div>
       <label class="label_text" for="name">What's your name?</label>
-      <input type="text" id="name" name="name" placeholder="Your name goes here" required>
+      <input type="text" id="name" name="name" placeholder="Your name goes here" required
+        [(ngModel)]="formModel.name">
       <div class="seperator"></div>
       <label class="label_text" for="email">What's your email?</label>
-      <input type="email" id="email" name="email" placeholder="youremail@email.com" required>
+      <input type="email" id="email" name="email" placeholder="youremail@email.com" required email
+        [(ngModel)]="formModel.email">
       <div class="seperator"></div>
       <label class="label_text" for="message">How can I help you?</label>
       <textarea id="message" name="message" rows="3" placeholder="Hello Lukas, I am interested in..."
-        required></textarea>
+        required [(ngModel)]="formModel.message"></textarea>
       <div class="seperator"></div>
       <div class="checkbox">
-        <input type="checkbox" id="privacy" required>
+        <input type="checkbox" id="privacy" name="privacy" required [(ngModel)]="formModel.privacy">
         <label for="privacy">I've read the <span>privacy policy</span> and agree to the processing of my data as
           outlined.</label>
       </div>
     </div>
     <div>
-      <button type="submit">Say Hello :)</button>
+      <button type="submit" [disabled]="isSending || contactForm.invalid">
+        {{ isSending ? 'Sending...' : 'Say Hello :)' }}
+      </button>
     </div>
   </form>
+
+  @if (isSuccessOverlayVisible) {
+  <div class="success_overlay" role="status" aria-live="polite" aria-atomic="true">
+    <div class="success_overlay_content">
+      <p>E-Mail wurde abgesendet, alles ist gut.</p>
+    </div>
+  </div>
+  }
 </section>
 </div>
