@@ -127,6 +127,10 @@ section {
     }
 }
 
+.d_none {
+    display: none;
+}   
+
 div {
     background-color: transparent;
 
@@ -247,5 +251,15 @@ div {
 
     to {
         transform: translateX(-200%);
+    }
+}
+
+@media (max-width: 1000px){
+    .d_none {
+        display: block;
+    }
+
+    .mail_to {
+        display: none;
     }
 }

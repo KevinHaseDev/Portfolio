@@ -13,7 +13,7 @@ type LandingPageContent = {
   selector: 'app-landing-page',
   imports: [RouterLink],
   templateUrl: './landing-page.html',
-  styleUrl: './landing-page.scss'
+  styleUrls: ['./landing-page.scss']
 })
 export class LandingPage {
   private languageService = inject(LanguageService);

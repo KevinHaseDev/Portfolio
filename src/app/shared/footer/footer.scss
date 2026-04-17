@@ -27,15 +27,13 @@
     justify-content: center;
     margin-bottom: 20px;
 
-    &:hover .logo_picture_default,
-    &:focus .logo_picture_default,
-    &:focus-visible .logo_picture_default {
+    &:focus .logo_image_default,
+    &:focus-visible .logo_image_default {
         opacity: 0;
     }
 
-    &:hover .logo_picture_hover,
-    &:focus .logo_picture_hover,
-    &:focus-visible .logo_picture_hover {
+    &:focus .logo_image_hover,
+    &:focus-visible .logo_image_hover {
         opacity: 1;
     }
 }
@@ -47,38 +45,37 @@
     justify-content: center;
     width: 200px;
     height: 160px;
-}
 
-.logo_picture {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.2s ease;
-}
+    &:hover .logo_image_default {
+        opacity: 0;
+    }
 
-.logo_picture_default {
-    opacity: 1;
-}
-
-.logo_picture_hover {
-    opacity: 0;
-    pointer-events: none;
+    &:hover .logo_image_hover {
+        opacity: 1;
+    }
 }
 
 .logo_image {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
+    transition: opacity 0.2s ease;
 }
+
+.logo_image_default {
+    opacity: 1;
+    content: url("/assets/img/Monogramm.png");
+}
+
 .logo_image_hover {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
+    opacity: 0;
+    pointer-events: none;
+    content: url("/assets/img/Monogramm_hover.png");
 }
+
 
 .role,
 .location {
@@ -131,6 +128,24 @@
 
     .footer-right {
         gap: 14px;
+    }
+}
+@media (max-width: 900px) {
+    .logo_stack {
+        height:60px;
+        width: 80px;
+    }
+
+    .logo_image_default {
+        content: url("/assets/img/Monogramm_short.png");
+        height: 60px;
+        width: 80px;
+    }
+
+    .logo_image_hover {
+        content: url("/assets/img/Monogramm_hover_short.png");
+        height: 60px;
+        width: 80px;
     }
 }
 

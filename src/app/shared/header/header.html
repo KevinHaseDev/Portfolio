@@ -29,14 +29,8 @@
         <button class="logo_button" type="button" (click)="navigateToSection('home')"
             [attr.aria-label]="getHomeButtonAriaLabel()">
             <span class="logo_stack">
-                <picture class="logo_picture logo_picture_default">
-                    <source media="(max-width: 768px)" srcset="./assets/img/Monogramm_short.png">
-                    <img class="logo_image" src="./assets/img/Monogramm.png" [attr.alt]="getLogoAltText()">
-                </picture>
-                <picture class="logo_picture logo_picture_hover" aria-hidden="true">
-                    <source media="(max-width: 768px)" srcset="./assets/img/Monogramm_hover_short.png">
-                    <img class="logo_image_hover" src="./assets/img/Monogramm_hover.png" alt="">
-                </picture>
+                <img class="logo_image logo_image_default" src="./assets/img/Monogramm.png" [attr.alt]="getLogoAltText()">
+                <img class="logo_image logo_image_hover" src="./assets/img/Monogramm_hover.png" alt="" aria-hidden="true">
             </span>
         </button>
     </header>
