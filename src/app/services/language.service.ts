@@ -210,7 +210,7 @@ export class LanguageService {
       return;
     }
     try {
-      let response = await fetch(`/assets/i18n/${language}.json`);
+      let response = await fetch(`../assets/i18n/${language}.json`);
       if (!response.ok) {
         return;
       }
