@@ -160,13 +160,13 @@ header {
 
 .logo_image_default {
     opacity: 1;
-    content: url("../assets/img/Monogramm.png");
+    content: url("../../../../public/assets/img/Monogramm.png");
 }
 
 .logo_image_hover {
     opacity: 0;
     pointer-events: none;
-    content: url("../assets/img/Monogramm_hover.png");
+    content: url("../../../../public/assets/img/Monogramm_hover.png");
 }
 
 .switch {
@@ -250,13 +250,13 @@ header {
     }
 
     .logo_image_default {
-        content: url("../assets/img/Monogramm_short.png");
+        content: url("../../../../public/assets/img/Monogramm_short.png");
         height: 60px;
         margin-top: 10px;
     }
     
     .logo_image_hover {
-        content: url("../assets/img/Monogramm_hover_short.png");
+        content: url("../../../../public/assets/img/Monogramm_hover_short.png");
         height: 60px;
         margin-top: 10px;
     }
