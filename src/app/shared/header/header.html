@@ -15,7 +15,10 @@
             <label class="switch">
                 <input type="checkbox" [checked]="isGermanLanguageActive()" [attr.aria-label]="getLanguageSwitchAriaLabel()"
                     (change)="onLanguageSwitchChange($event)">
-                <span class="slider round"></span>
+                <span class="slider" aria-hidden="true">
+                    <span class="language_label language_label_en">EN</span>
+                    <span class="language_label language_label_de">DE</span>
+                </span>
             </label>
 
             @for (section of sections; track section.id) {
