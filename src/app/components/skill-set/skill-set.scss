@@ -52,8 +52,11 @@ section {
     }
 
     button {
+        --button-loop-gap: 52px;
         cursor: pointer;
-        display: inline-block;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
         width: 30%;
         font-size: 18px;
@@ -70,34 +73,37 @@ section {
             color: #35d0b2;
             border-color: #35d0b2;
 
-            span {
-                animation: scroll-loop 2s linear infinite;
+            .button_text_loop {
+                animation: button-marquee 2.2s linear infinite;
             }
         }
 
-        span {
+        .button_text_loop {
+            position: relative;
             display: inline-block;
             white-space: nowrap;
-            transition: transform 0.3s ease-in-out;
+            line-height: 1;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            will-change: transform;
+
+            &::after {
+                content: attr(data-text);
+                position: absolute;
+                top: 0;
+                left: calc(100% + var(--button-loop-gap));
+            }
         }
     }
 }
 
-@keyframes scroll-loop {
-    0% {
-        transform: translateX(0);
+@keyframes button-marquee {
+    from {
+        transform: translate3d(0, 0, 0);
     }
 
-    50% {
-        transform: translateX(-120%);
-    }
-
-    51% {
-        transform: translateX(180%);
-    }
-
-    100% {
-        transform: translateX(0);
+    to {
+        transform: translate3d(calc(-100% - var(--button-loop-gap)), 0, 0);
     }
 }
 

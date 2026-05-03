@@ -3,8 +3,12 @@
         <h2>{{ content().roleTitle }}</h2>
         <h1>Kevin Hase</h1>
         <div class="links">
-            <button routerLink="/" fragment="projects"><span>{{ content().checkWorkButton }}</span></button>
-            <button routerLink="/" fragment="contact"><span>{{ content().contactButton }}</span></button>
+            <button routerLink="/" fragment="projects">
+                <span class="button_text_loop" [attr.data-text]="content().checkWorkButton">{{ content().checkWorkButton }}</span>
+            </button>
+            <button routerLink="/" fragment="contact">
+                <span class="button_text_loop" [attr.data-text]="content().contactButton">{{ content().contactButton }}</span>
+            </button>
         </div>
     </div>
     <div class="scroll_banner">

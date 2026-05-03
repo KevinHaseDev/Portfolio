@@ -7,7 +7,9 @@
                 <p>{{ content().description }}</p>
                 <h4><span class="highlight">{{ content().needAnotherSkillText }}</span></h4>
                 <p>{{ content().contactPrompt }}</p>
-                <button routerLink="/" fragment="contact"><span>{{ content().talkButton }}</span></button>
+                <button routerLink="/" fragment="contact">
+                    <span class="button_text_loop" [attr.data-text]="content().talkButton">{{ content().talkButton }}</span>
+                </button>
             </div>
         </div>
 
