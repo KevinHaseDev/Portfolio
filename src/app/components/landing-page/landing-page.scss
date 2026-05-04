@@ -239,25 +239,35 @@ div {
 
 .scroll_content {
     display: flex;
+    width: max-content;
+    align-items: center;
     white-space: nowrap;
-    animation: scroll 20s linear infinite;
+    animation: scroll-banner-loop 20s linear infinite;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
 
-    span {
-        color: #35d0b2;
-        font-size: 32px;
-        letter-spacing: 1px;
-        padding-right: 50px;
-        font-family: var(--font-sans);
+    .scroll_track {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+
+        span {
+            color: #35d0b2;
+            font-size: 32px;
+            letter-spacing: 1px;
+            padding-right: 50px;
+            font-family: var(--font-sans);
+        }
     }
 }
 
-@keyframes scroll {
+@keyframes scroll-banner-loop {
     from {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 
     to {
-        transform: translateX(-200%);
+        transform: translate3d(-50%, 0, 0);
     }
 }
 

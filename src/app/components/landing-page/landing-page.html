@@ -13,14 +13,14 @@
     </div>
     <div class="scroll_banner">
         <div class="scroll_content">
-            <span>•</span><span> {{ content().bannerItems[0] }} </span><span>•</span><span> {{ content().bannerItems[1] }}
-            </span><span>•</span><span> {{ content().bannerItems[2] }} </span><span>•</span><span> {{ content().bannerItems[3] }} </span>
-            <span>•</span><span> {{ content().bannerItems[0] }} </span><span>•</span><span> {{ content().bannerItems[1] }}
-            </span><span>•</span><span> {{ content().bannerItems[2] }} </span><span>•</span><span> {{ content().bannerItems[3] }} </span>
-            <span>•</span><span> {{ content().bannerItems[0] }} </span><span>•</span><span> {{ content().bannerItems[1] }}
-            </span><span>•</span><span> {{ content().bannerItems[2] }} </span><span>•</span><span> {{ content().bannerItems[3] }} </span>
-            <span>•</span><span> {{ content().bannerItems[0] }} </span><span>•</span><span> {{ content().bannerItems[1] }}
-            </span><span>•</span><span> {{ content().bannerItems[2] }} </span><span>•</span><span> {{ content().bannerItems[3] }} </span>
+            <div class="scroll_track">
+                @for (repeatIndex of [0, 1]; track repeatIndex) {
+                @for (bannerItem of content().bannerItems; track $index) {
+                <span aria-hidden="true">•</span>
+                <span>{{ bannerItem }}</span>
+                }
+                }
+            </div>
         </div>
     </div>
     <div class="left_side">
