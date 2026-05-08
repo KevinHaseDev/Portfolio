@@ -32,6 +32,8 @@
   --z-modal: 1000;
 
   --header-offset: 104px;
+  --anchor-scroll-gap: 20px;
+  --anchor-offset: calc(var(--header-offset) + var(--anchor-scroll-gap));
 }
 
 * {
@@ -42,7 +44,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-offset);
+  scroll-padding-top: var(--anchor-offset);
 }
 
 body {
@@ -56,7 +58,16 @@ a {
 }
 
 section[id] {
-  scroll-margin-top: var(--header-offset);
+  scroll-margin-top: var(--anchor-offset);
+}
+
+#home,
+#about,
+#skills,
+#projects,
+#comments,
+#contact {
+  scroll-margin-top: var(--anchor-offset);
 }
 
 .wrapper {
@@ -103,6 +114,7 @@ body.dialog-open {
   :root {
     --content-padding-inline: 40px;
     --header-offset: 88px;
+    --anchor-scroll-gap: 16px;
   }
 
   .section-space {
@@ -115,5 +127,6 @@ body.dialog-open {
   :root {
     --content-padding-inline: 20px;
     --header-offset: 80px;
+    --anchor-scroll-gap: 12px;
   }
 }
