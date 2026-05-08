@@ -11,12 +11,13 @@
     z-index: var(--z-header);
 }
 
-header {
+.content-shell {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     position: relative;
+    max-width: var(--content-max-width);
     height: var(--header-offset);
     min-height: var(--header-offset);
 }
@@ -277,7 +278,7 @@ header {
 }
 
 @media (max-width: 900px) {
-    header {
+    .content-shell {
         justify-content: space-between;
         gap: 12px;
         padding: 8px 0px;
@@ -373,7 +374,7 @@ header {
 }
 
 @media (max-width: 480px) {
-    header {
+    .content-shell {
         gap: 12px;
     }
 
@@ -411,7 +412,7 @@ header {
 }
 
 @media (max-width: 320px) {
-    header {
+    .content-shell {
         gap: 10px;
     }
 
