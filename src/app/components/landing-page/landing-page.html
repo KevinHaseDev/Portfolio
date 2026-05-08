@@ -1,44 +1,48 @@
-<section id="home" class="wrapper">
-    <div>
-        <h2>{{ content().roleTitle }}</h2>
-        <h1>Kevin Hase</h1>
-        <div class="links">
-            <button routerLink="/" fragment="projects">
-                <span class="button_text_loop" [attr.data-text]="content().checkWorkButton">{{ content().checkWorkButton }}</span>
-            </button>
-            <button routerLink="/" fragment="contact">
-                <span class="button_text_loop" [attr.data-text]="content().contactButton">{{ content().contactButton }}</span>
-            </button>
-        </div>
-    </div>
-    <div class="scroll_banner">
-        <div class="scroll_content">
-            <div class="scroll_track">
-                @for (repeatIndex of [0, 1]; track repeatIndex) {
-                @for (bannerItem of content().bannerItems; track $index) {
-                <span aria-hidden="true">•</span>
-                <span>{{ bannerItem }}</span>
-                }
-                }
+<section id="home">
+    <div class="wrapper">
+        <div class="intro">
+            <h2>{{ content().roleTitle }}</h2>
+            <h1>Kevin Hase</h1>
+            <div class="links">
+                <button routerLink="/" fragment="projects">
+                    <span class="button_text_loop" [attr.data-text]="content().checkWorkButton">{{
+                        content().checkWorkButton }}</span>
+                </button>
+                <button routerLink="/" fragment="contact">
+                    <span class="button_text_loop" [attr.data-text]="content().contactButton">{{ content().contactButton
+                        }}</span>
+                </button>
             </div>
         </div>
-    </div>
-    <div class="left_side">
-
-        <div class="left_side_arrow">
-            <img src="./assets/icons/Landing_page/landing_page_arrow.svg" alt="" class="float">
+        <div class="scroll_banner">
+            <div class="scroll_content">
+                <div class="scroll_track">
+                    @for (repeatIndex of [0, 1, 2, 3, 4]; track repeatIndex) {
+                    @for (bannerItem of content().bannerItems; track $index) {
+                    <span aria-hidden="true">•</span>
+                    <span>{{ bannerItem }}</span>
+                    }}
+                </div>
+            </div>
         </div>
-        <div class="separator_left"></div>
-    </div>
-    <div class="right_side">
-
-        <div class="right_links">
-            <a href="https://github.com/KevinHaseDev" target="_blank"><img
-                    src="./assets/icons/Landing_page/Github_icon.svg" alt=""></a>
-            <a class="mail_to" href="mailto:hasekevin21@googlemail.com">hasekevin21@googlemail.com</a>
-            <a class="d_none" href="mailto:hasekevin21@googlemail.com"><img src="./assets/icons/Landing_page/mail.svg" alt=""></a>
-        </div>
-        <div class="separator_right">
+        <div class="separator">
+            <div class="left_side">
+                <div class="left_side_arrow">
+                    <img src="./assets/icons/Landing_page/landing_page_arrow.svg" alt="" class="float">
+                </div>
+                <div class="separator_left"></div>
+            </div>
+            <div class="right_side">
+                <div class="right_links">
+                    <a href="https://github.com/KevinHaseDev" target="_blank"><img
+                            src="./assets/icons/Landing_page/Github_icon.svg" alt=""></a>
+                    <a class="mail_to" href="mailto:hasekevin21@googlemail.com">hasekevin21@googlemail.com</a>
+                    <a class="d_none" href="mailto:hasekevin21@googlemail.com"><img
+                            src="./assets/icons/Landing_page/mail.svg" alt=""></a>
+                </div>
+                <div class="separator_right">
+                </div>
+            </div>
         </div>
     </div>
 </section>
