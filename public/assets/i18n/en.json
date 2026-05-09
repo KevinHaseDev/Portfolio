@@ -79,7 +79,7 @@
 				},
 				"footer": {
 					"closeLabel": "Close",
-					"previewImage": "./assets/img/projects/join.svg",
+					"previewImage": "./assets/img/projects/join.jpg",
 					"nextProject": {
 						"label": "Next project",
 						"icon": "./assets/icons/Projects/arrow_forward.svg"
@@ -110,7 +110,7 @@
 				},
 				"footer": {
 					"closeLabel": "Close",
-					"previewImage": "./assets/img/projects/el_pollo_loco.svg",
+					"previewImage": "./assets/img/projects/el_pollo_loco.jpg",
 					"nextProject": {
 						"label": "Next project",
 						"icon": "./assets/icons/Projects/arrow_forward.svg"

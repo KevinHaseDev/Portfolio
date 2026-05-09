@@ -4,10 +4,12 @@
         <h1>{{ content().sectionTitle }}</h1>
         <p>{{ content().sectionLineOne }}</p>
         <p>{{ content().sectionLineTwo }}</p>
-        <div class="projects_section">
+        <div class="projects_section" [class.join-preview]="activePreviewVariant() === 'join'"
+            [class.el-pollo-preview]="activePreviewVariant() === 'el_pollo_loco'"
+            [class.pokedex-preview]="activePreviewVariant() === 'pokedex'">
             <div class="projects_box">
                 @for (project of projects; track project.name; let i = $index) {
-                <a [class]="project.class" (mouseover)="setPreviewImage(project.previewImages[0])" (click)="giveObject(i)">
+                <a [class]="project.className" (mouseenter)="updatePreview(project)" (click)="giveObject(i)">
                     <div class="project_content">
                         <span class="project_name">
                             {{ project.name }}
@@ -22,8 +24,8 @@
             </div>
             <div class="project_preview">
                 <img class="background" src="/assets/img/projects/projects_background.svg"
-                    alt="Dekoratives Hintergrundbild" />
-                <img class="foreground" [src]="currentPreviewImage" alt="Projekt-Vorschau">
+                    alt="background image" />
+                <img class="foreground" [src]="currentPreviewImage" alt="project preview">
             </div>
 
 

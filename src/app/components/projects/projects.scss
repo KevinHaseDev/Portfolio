@@ -53,6 +53,9 @@ section {
   align-items: flex-start;
   gap: 60px;
   margin-top: 40px;
+  margin-bottom: 80px;
+  --foreground-top: 0px;
+  --background-top: 40px;
 }
 
 .projects_box {
@@ -86,17 +89,16 @@ section {
 }
 
 .project_preview {
+  width: 410px;
   height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  flex-shrink: 0;
 }
 
 .project_preview .background {
   position: absolute;
-  margin-top: 40px;
-  margin-left: 60px;
+  top: var(--background-top);
+  left: 60px;
   width: 350px;
   height: 230px;
   border-radius: 48px;
@@ -108,7 +110,9 @@ section {
 }
 
 .project_preview .foreground {
-  position: relative;
+  position: absolute;
+  top: var(--foreground-top);
+  left: 0;
   z-index: 1;
   width: 350px;
   height: 230px;
@@ -124,16 +128,19 @@ section {
   transform: translate(0, 0);
 }
 
-.projects_box:has(.join:hover)~.project_preview {
-  align-items: flex-start;
+.projects_section.join-preview {
+  --foreground-top: 0px;
+  --background-top: 40px;
 }
 
-.projects_box:has(.el_pollo_loco:hover)~.project_preview {
-  align-items: center;
+.projects_section.el-pollo-preview {
+  --foreground-top: 35px;
+  --background-top: 75px;
 }
 
-.projects_box:has(.pokedex:hover)~.project_preview {
-  align-items: flex-end;
+.projects_section.pokedex-preview {
+  --foreground-top: 70px;
+  --background-top: 110px;
 }
 
 @media (max-width: 1024px) {
@@ -152,22 +159,22 @@ section {
     position: static;
     height: auto;
     margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .project_preview .foreground,
   .project_preview .background {
-    
     transform: translate(0, 0);
     position: relative;
+    top: auto;
+    left: auto;
     margin: 0 auto;
   }
 
   .project_preview .background {
     display: none;
-  }
-
-  .projects_box:hover~.project_preview {
-    align-items: center;
   }
 }
 

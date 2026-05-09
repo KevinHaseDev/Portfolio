@@ -12,6 +12,16 @@ type ProjectsContent = {
   dialogQuestion: string;
 };
 
+type ProjectPreviewVariant = 'join' | 'el_pollo_loco' | 'pokedex';
+
+type ProjectData = {
+  name: string;
+  className: string;
+  previewVariant: ProjectPreviewVariant;
+  languages: string[];
+  previewImage: string;
+};
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -32,29 +42,33 @@ export class Projects {
     return this.languageService.getTranslationByLanguage<ProjectsContent>('projects.content');
   });
 
-  projects = [
+  projects: ProjectData[] = [
     {
       name: 'Join',
-      class: 'join',
+      className: 'join',
+      previewVariant: 'join',
       languages: ['Angular', 'Typescript', 'HTML', 'CSS', 'Firebase'],
-      previewImages: ['./assets/img/projects/join.svg']
+      previewImage: './assets/img/projects/join.jpg'
     },
     {
       name: 'El Pollo Loco',
-      class: 'el_pollo_loco',
+      className: 'el_pollo_loco',
+      previewVariant: 'el_pollo_loco',
       languages: ['Javascript', 'HTML', 'CSS'],
-      previewImages: ['./assets/img/projects/el_pollo_loco.svg']
+      previewImage: './assets/img/projects/el_pollo_loco.jpg'
     },
     {
       name: 'Pokedex',
-      class: 'pokedex last_link',
+      className: 'pokedex last_link',
+      previewVariant: 'pokedex',
       languages: ['HTML', 'CSS', 'Javascript', 'API'],
-      previewImages: ['./assets/img/projects/Pokedex_screen.jpg']
+      previewImage: './assets/img/projects/Pokedex_screen.jpg'
     }
   ];
 
   isClicked = false;
-  currentPreviewImage: string = this.projects[0].previewImages[0];
+  currentPreviewImage: string = this.projects[0].previewImage;
+  activePreviewVariant = signal<ProjectPreviewVariant>(this.projects[0].previewVariant);
 
   currentPreview = computed(() => {
     let dialogs = this.getCurrentProjectDialogs();
@@ -78,8 +92,9 @@ export class Projects {
     this.currentProjectIndex.set(nextIndex);
   }
 
-  setPreviewImage(image: string): void {
-    this.currentPreviewImage = image;
+  updatePreview(project: ProjectData): void {
+    this.currentPreviewImage = project.previewImage;
+    this.activePreviewVariant.set(project.previewVariant);
   }
 
   private getCurrentProjectDialogs(): ProjectDialog[] {
