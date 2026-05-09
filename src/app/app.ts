@@ -1,8 +1,9 @@
-import { ViewportScroller } from '@angular/common';
-import { AfterViewInit, Component, inject, signal } from '@angular/core';
+import { DOCUMENT, ViewportScroller } from '@angular/common';
+import { AfterViewInit, Component, effect, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './shared/header/header';
 import { Footer } from './shared/footer/footer';
+import { AppLanguage, LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,16 @@ import { Footer } from './shared/footer/footer';
 })
 export class App implements AfterViewInit {
   private viewportScroller = inject(ViewportScroller);
+  private languageService = inject(LanguageService);
+  private document = inject(DOCUMENT);
   protected readonly title = signal('Portfolio');
+
+  constructor() {
+    effect(() => {
+      let language = this.languageService.currentLanguage();
+      this.applyLanguageMetadata(language);
+    });
+  }
 
   ngAfterViewInit(): void {
     this.viewportScroller.setOffset(() => [0, this.getAnchorOffset()]);
@@ -27,5 +37,14 @@ export class App implements AfterViewInit {
       return 120;
     }
     return Math.ceil(headerElement.getBoundingClientRect().height + 16);
+  }
+
+  private applyLanguageMetadata(language: AppLanguage): void {
+    if (!this.document?.body || !this.document?.documentElement) {
+      return;
+    }
+    this.document.body.classList.remove('language-en', 'language-de');
+    this.document.body.classList.add(`language-${language}`);
+    this.document.documentElement.lang = language;
   }
 }

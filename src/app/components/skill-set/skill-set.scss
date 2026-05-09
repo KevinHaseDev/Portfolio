@@ -85,7 +85,9 @@ section {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        width: 30%;
+        width: fit-content;
+        min-width: 150px;
+        max-width: 100%;
         font-size: 18px;
         font-family: var(--font-sans);
         font-weight: 400;
@@ -94,6 +96,7 @@ section {
         border: 2px solid #ffffff;
         border-radius: 100px;
         background-color: transparent;
+        white-space: nowrap;
         transition: color 1s ease-in-out, border-color 1s ease-in-out;
 
         &:hover {
@@ -122,6 +125,10 @@ section {
             }
         }
     }
+}
+
+:host-context(body.language-de) .skill_box button {
+    min-width: 210px;
 }
 
 @keyframes button-marquee {
@@ -241,10 +248,15 @@ section {
 
         >button {
             font-size: 16px;
-            width: 120px;
+            width: fit-content;
+            min-width: 130px;
             height: 44px;
             padding-top: 9px;
         }
+    }
+
+    :host-context(body.language-de) .skill_box >button {
+        min-width: 190px;
     }
 
     .skill_icons {
@@ -296,10 +308,15 @@ section {
 
         >button {
             font-size: 14px;
-            width: 110px;
+            width: fit-content;
+            min-width: 120px;
             height: 40px;
             padding: 8px 15px;
         }
+    }
+
+    :host-context(body.language-de) .skill_box >button {
+        min-width: 170px;
     }
 
     .skill_icons {
@@ -350,10 +367,15 @@ section {
 
         >button {
             font-size: 13px;
-            width: 100px;
+            width: fit-content;
+            min-width: 110px;
             height: 38px;
             padding: 7px 12px;
         }
+    }
+
+    :host-context(body.language-de) .skill_box >button {
+        min-width: 155px;
     }
 
     .skill_icons {
