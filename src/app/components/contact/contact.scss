@@ -55,6 +55,7 @@ section {
     font-size: 24px;
     color: #00bfa6;
     padding-left: 40px;
+    padding-top: 15px;
 }
 
 input {
@@ -68,12 +69,12 @@ textarea {
 
 .seperator {
     height: 1px;
-    width: min(600px, 80%);
+    width: 100%;
     background-color: #00bfa6;
 }
 
 form {
-    width: min(700px, 90%);
+    width: min(700px, 100%);
     display: flex;
     flex-direction: column;
     align-items: center;

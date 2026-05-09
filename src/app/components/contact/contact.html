@@ -1,62 +1,63 @@
 <div class="wrapper">
-<section id="contact" class="contact content-shell section-space">
-  <div class="contact-text">
-    <h2>{{ content().sectionTitle }}</h2>
-    <h3>{{ content().sectionHeadlineLineOne }} <br> {{ content().sectionHeadlineLineTwo }}</h3>
-    <h4>{{ content().problemHeadline }}</h4>
-    <p>{{ content().introductionText }}</p>
-    <p>{{ content().frontendPromptText }}<span>{{ content().frontendPromptHighlight }}</span></p>
-  </div>
+  <section id="contact" class="contact content-shell section-space">
+    <div class="contact-text">
+      <h2>{{ content().sectionTitle }}</h2>
+      <h3>{{ content().sectionHeadlineLineOne }} <br> {{ content().sectionHeadlineLineTwo }}</h3>
+      <h4>{{ content().problemHeadline }}</h4>
+      <p>{{ content().introductionText }}</p>
+      <p>{{ content().frontendPromptText }}<span>{{ content().frontendPromptHighlight }}</span></p>
+    </div>
 
-  <form #contactForm="ngForm" (ngSubmit)="handleSubmit(contactForm)" novalidate>
-    <div class="contact-form">
-      <div class="seperator"></div>
-      <label class="label_text" for="name">{{ content().nameLabel }}</label>
-      <input type="text" id="name" name="name" [placeholder]="content().namePlaceholder" required
-        pattern="^(?=.*[A-Za-z])[A-Za-z\s'\-]+$" #nameModel="ngModel" [(ngModel)]="formModel.name"
-        [class.input_error]="showValidationError(nameModel)">
-      @if (showValidationError(nameModel)) {
-      <p class="field_error_message">{{ getNameErrorMessage(nameModel) }}</p>
-      }
-      <div class="seperator"></div>
-      <label class="label_text" for="email">{{ content().emailLabel }}</label>
-      <input type="email" id="email" name="email" [placeholder]="content().emailPlaceholder" required email
-        #emailModel="ngModel" [(ngModel)]="formModel.email" [class.input_error]="showValidationError(emailModel)">
-      @if (showValidationError(emailModel)) {
-      <p class="field_error_message">{{ getEmailErrorMessage(emailModel) }}</p>
-      }
-      <div class="seperator"></div>
-      <label class="label_text" for="message">{{ content().messageLabel }}</label>
-      <textarea id="message" name="message" rows="3" [placeholder]="content().messagePlaceholder"
-        required #messageModel="ngModel" [(ngModel)]="formModel.message"
-        [class.input_error]="showValidationError(messageModel)"></textarea>
-      @if (showValidationError(messageModel)) {
-      <p class="field_error_message">{{ getMessageErrorMessage(messageModel) }}</p>
-      }
-      <div class="seperator"></div>
-      <div class="checkbox">
-        <input type="checkbox" id="privacy" name="privacy" required #privacyModel="ngModel"
-          [(ngModel)]="formModel.privacy" [class.checkbox_input_error]="showValidationError(privacyModel)">
-        <label for="privacy">{{ content().privacyLabelPrefix }} <a routerLink="/privacy-policy">{{ content().privacyPolicyLabel }}</a>
-          {{ content().privacyLabelSuffix }}</label>
+    <form #contactForm="ngForm" (ngSubmit)="handleSubmit(contactForm)" novalidate>
+      <div class="contact-form">
+        <div class="seperator"></div>
+        <label class="label_text" for="name">{{ content().nameLabel }}</label>
+        <input type="text" id="name" name="name" [placeholder]="content().namePlaceholder" required
+          pattern="^(?=.*[A-Za-z])[A-Za-z\s'\-]+$" #nameModel="ngModel" [(ngModel)]="formModel.name"
+          [class.input_error]="showValidationError(nameModel)">
+        @if (showValidationError(nameModel)) {
+        <p class="field_error_message">{{ getNameErrorMessage(nameModel) }}</p>
+        }
+        <div class="seperator"></div>
+        <label class="label_text" for="email">{{ content().emailLabel }}</label>
+        <input type="email" id="email" name="email" [placeholder]="content().emailPlaceholder" required email
+          #emailModel="ngModel" [(ngModel)]="formModel.email" [class.input_error]="showValidationError(emailModel)">
+        @if (showValidationError(emailModel)) {
+        <p class="field_error_message">{{ getEmailErrorMessage(emailModel) }}</p>
+        }
+        <div class="seperator"></div>
+        <label class="label_text" for="message">{{ content().messageLabel }}</label>
+        <textarea id="message" name="message" rows="3" [placeholder]="content().messagePlaceholder" required
+          #messageModel="ngModel" [(ngModel)]="formModel.message"
+          [class.input_error]="showValidationError(messageModel)"></textarea>
+        @if (showValidationError(messageModel)) {
+        <p class="field_error_message">{{ getMessageErrorMessage(messageModel) }}</p>
+        }
+        <div class="seperator"></div>
+        <div class="checkbox">
+          <input type="checkbox" id="privacy" name="privacy" required #privacyModel="ngModel"
+            [(ngModel)]="formModel.privacy" [class.checkbox_input_error]="showValidationError(privacyModel)">
+          <label for="privacy">{{ content().privacyLabelPrefix }} <a routerLink="/privacy-policy">{{
+              content().privacyPolicyLabel }}</a>
+            {{ content().privacyLabelSuffix }}</label>
+        </div>
+        @if (showValidationError(privacyModel)) {
+        <p class="field_error_message checkbox_error_message">{{ getPrivacyErrorMessage(privacyModel) }}</p>
+        }
       </div>
-      @if (showValidationError(privacyModel)) {
-      <p class="field_error_message checkbox_error_message">{{ getPrivacyErrorMessage(privacyModel) }}</p>
-      }
-    </div>
-    <div>
-      <button type="submit" [disabled]="isSending">
-        {{ getSubmitButtonLabel() }}
-      </button>
-    </div>
-  </form>
+      <div>
+        <button type="submit" [disabled]="isSending">
+          {{ getSubmitButtonLabel() }}
+        </button>
+      </div>
+    </form>
 
-  @if (isSuccessOverlayVisible) {
-  <div class="success_overlay" role="status" aria-live="polite" aria-atomic="true">
-    <div class="success_overlay_content">
-      <p>{{ content().successMessage }}</p>
+    @if (isSuccessOverlayVisible) {
+    <div class="success_overlay" role="status" aria-live="polite" aria-atomic="true">
+      <div class="success_overlay_content">
+        <p>{{ content().successMessage }}</p>
+      </div>
     </div>
-  </div>
-  }
-</section>
+    }
+  </section>
 </div>
