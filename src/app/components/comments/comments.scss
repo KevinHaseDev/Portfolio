@@ -60,7 +60,19 @@ section {
         background-color: #26524a;
         display: flex;
         flex-direction: column;
+         transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), opacity 280ms ease;
 
+        &.left,
+        &.right {
+            opacity: 0.6;
+            transform: scale(0.95);
+        }
+
+        &.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
         .comment_box_underline {
             margin-top: auto;
             width: 100%;
@@ -135,7 +147,8 @@ section {
 
     .seperator {
         background-color: white;
-        width: 500px;
+        width: auto;
+        flex: 1;
         height: 1px;
         margin-left: 30px;
     }
@@ -156,13 +169,12 @@ section {
         }
 
         .comments_container {
-            flex-direction: column;
-            gap: 40px;
+            gap: clamp(14px, 2.6vw, 40px);
+            justify-content: center;
         }
 
         .comment_box {
-            width: 90%;
-            max-width: 700px;
+            width: min(700px, 60vw);
         }
     }
 }
@@ -181,11 +193,13 @@ section {
         }
 
         .comments_container {
-            gap: 30px;
+            width: 100%;
+            justify-content: center;
         }
 
         .comment_box {
-            width: 95%;
+            width: 100%;
+            max-width: 640px;
             padding: 15px;
             border-radius: 20px;
             min-height: 240px;
@@ -235,7 +249,8 @@ section {
         }
 
         .comments_container {
-            gap: 20px;
+            gap: 0;
+            justify-content: center;
         }
 
         .comment_box {
@@ -243,6 +258,15 @@ section {
             padding: 12px;
             border-radius: 15px;
             min-height: 220px;
+
+            &.left,
+            &.right {
+                display: none;
+            }
+
+            &.active {
+                display: flex;
+            }
 
             span {
                 font-size: 14px;
@@ -289,7 +313,7 @@ section {
         }
 
         .comments_container {
-            gap: 15px;
+            gap: 0;
         }
 
         .comment_box {

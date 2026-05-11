@@ -136,145 +136,109 @@ span {
 @media (max-width: 1024px) {
     section {
         flex-direction: column;
+        align-items: center;
+        gap: 24px;
     }
 
-    .imageAboutMe {
-        width: 450px;
-        margin: 20px auto;
+    .left_part,
+    .right_part {
+        width: 100%;
+        max-width: 700px;
     }
 
-    .left_part {
-        margin-bottom: 40px;
+    .image-stack {
+        width: min(560px, 100%);
     }
 
     .aboutMe {
-        width: 500px;
-        height: auto;
-        margin: 20px auto;
+        width: 100%;
     }
 
-    span {
-        margin-top: 40px;
+    .right_part>span {
+        margin-top: 0;
+        margin-left: 0;
     }
 }
 
 @media (max-width: 768px) {
-    .imageAboutMe {
-        width: 350px;
-    }
-
     .aboutMe {
-        width: 90%;
         padding: 15px;
-        margin: 15px auto;
+        margin-top: 10px;
 
         >h2 {
-            font-size: 48px;
-        }
-
-        >p {
-            font-size: 16px;
+            font-size: clamp(32px, 8vw, 46px);
         }
     }
 
-    span {
-        font-size: 20px;
-        margin-top: 30px;
-        margin-left: 15px;
-    }
-
-    .text>div>p {
-        font-size: 16px;
+    .text>div {
+        margin-bottom: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .imageAboutMe {
-        width: 280px;
-        margin: 15px auto;
+    section {
+        gap: 16px;
     }
 
-    .left_part {
-        margin-bottom: 20px;
+    .image-stack {
+        width: min(320px, 100%);
     }
 
     .aboutMe {
-        width: 95%;
-        padding: 15px;
-        margin: 10px auto;
-        height: auto;
+        width: 100%;
+        padding: 14px;
+        border-radius: 16px;
 
         >h2 {
-            font-size: 36px;
-        }
-
-        >p {
-            font-size: 14px;
-            margin-bottom: 15px;
+            font-size: clamp(30px, 10vw, 38px);
         }
     }
 
-    span {
-        font-size: 18px;
-        margin-top: 20px;
-        margin-left: 10px;
+    .right_part>span {
+        font-size: 17px;
+    }
+
+    .p_static,
+    .p_hover {
+        font-size: 14px;
+        line-height: 1.45;
     }
 
     .text>div {
         gap: 8px;
-
-        >p {
-            font-size: 14px;
-            margin-bottom: 15px;
-
-            >.icons {
-                width: 24px;
-                height: 24px;
-                margin-right: 8px;
-            }
-        }
+        margin-bottom: 10px;
     }
 }
 
 @media (max-width: 320px) {
-    .imageAboutMe {
-        width: 240px;
-        margin: 10px auto;
+    .image-stack {
+        width: 100%;
     }
 
     .aboutMe {
         width: 100%;
         padding: 10px;
-        margin: 5px auto;
+        margin-top: 8px;
+        border-radius: 14px;
 
         >h2 {
-            font-size: 28px;
-        }
-
-        >p {
-            font-size: 13px;
-            margin-bottom: 12px;
+            font-size: 30px;
         }
     }
 
-    span {
+    .right_part>span {
         font-size: 16px;
-        margin-top: 15px;
-        margin-left: 8px;
+        margin-left: 0;
+    }
+
+    .p_static,
+    .p_hover {
+        font-size: 13px;
+        line-height: 1.4;
     }
 
     .text>div {
         gap: 6px;
-
-        >p {
-            font-size: 13px;
-            margin-bottom: 12px;
-
-            >.icons {
-                width: 20px;
-                height: 20px;
-                margin-right: 6px;
-            }
-        }
+        margin-bottom: 8px;
     }
 }

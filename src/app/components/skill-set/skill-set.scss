@@ -98,6 +98,7 @@ section {
         background-color: transparent;
         white-space: nowrap;
         transition: color 1s ease-in-out, border-color 1s ease-in-out;
+        transition-duration: 0.45s;
 
         &:hover {
             color: #35d0b2;
@@ -147,7 +148,7 @@ section {
 }
 
 .skill_icons {
-    width: min(500px, 45vw);
+    width: min(520px, 100%);
     height: auto;
     min-height: 430px;
     display: flex;
@@ -159,8 +160,8 @@ section {
     align-items: center;
 
     >div {
-        flex: 1 1 120px;
-        max-width: 160px;
+        flex: 1 1 110px;
+        max-width: 152px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -266,8 +267,8 @@ section {
         min-height: 320px;
 
         >div {
-            flex: 1 1 100px;
-            max-width: 140px;
+            flex: 1 1 92px;
+            max-width: 126px;
         }
 
         img {
@@ -321,17 +322,21 @@ section {
 
     .skill_icons {
         width: 100%;
-        gap: 16px;
+        gap: 12px;
         padding: 30px 10px;
         min-height: 260px;
 
         >div {
-            flex: 1 1 90px;
-            max-width: 120px;
+            flex: 1 1 84px;
+            max-width: 102px;
         }
 
         img {
-            max-width: 48px;
+            max-width: 44px;
+        }
+
+        p {
+            font-size: 12px;
         }
     }
 }
@@ -380,17 +385,21 @@ section {
 
     .skill_icons {
         width: 100%;
-        gap: 12px;
+        gap: 10px;
         padding: 20px 10px;
         min-height: 220px;
 
         >div {
-            flex: 1 1 80px;
-            max-width: 100px;
+            flex: 1 1 74px;
+            max-width: 88px;
         }
 
         img {
-            max-width: 36px;
+            max-width: 34px;
+        }
+
+        p {
+            font-size: 11px;
         }
     }
 }
