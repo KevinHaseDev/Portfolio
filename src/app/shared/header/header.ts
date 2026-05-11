@@ -123,11 +123,11 @@ export class Header implements AfterViewInit {
     if (typeof window === 'undefined') {
       return false;
     }
-    return window.innerWidth <= 768;
+    return window.innerWidth <= 900;
   }
 
   private updateLayoutState(): void {
-    this.isMobileLayout = window.innerWidth <= 768;
+    this.isMobileLayout = window.innerWidth <= 900;
     if (!this.isMobileLayout) {
       this.isMenuOpen = false;
     }

@@ -158,3 +158,26 @@ h1 {
         }
     }
 }
+
+@media (max-width: 320px) {
+    .privacy_copy {
+        margin-top: 24px;
+        gap: 14px;
+    }
+
+    .privacy_block {
+        h2 {
+            font-size: 18px;
+        }
+
+        p,
+        ul {
+            font-size: 13px;
+            line-height: 1.35;
+        }
+
+        li {
+            padding-left: 13px;
+        }
+    }
+}

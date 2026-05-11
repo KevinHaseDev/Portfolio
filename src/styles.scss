@@ -14,6 +14,7 @@
   --space-section-desktop: 96px;
   --space-section-tablet: 72px;
   --space-section-mobile: 56px;
+  --space-section-fluid: clamp(56px, 7vw, 96px);
 
   --radius-sm: 10px;
   --radius-md: 20px;
@@ -21,7 +22,7 @@
   --radius-pill: 999px;
 
   --content-max-width: 1920px;
-  --content-padding-inline: 120px;
+  --content-padding-inline: clamp(16px, 4vw, 120px);
 
   --breakpoint-desktop: 1024px;
   --breakpoint-tablet: 768px;
@@ -50,6 +51,7 @@ html {
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+  overflow-x: hidden;
 }
 
 a {
@@ -84,8 +86,8 @@ section[id] {
 }
 
 .section-space {
-  padding-top: var(--space-section-desktop);
-  padding-bottom: var(--space-section-desktop);
+  padding-top: var(--space-section-fluid);
+  padding-bottom: var(--space-section-fluid);
 }
 
 :is(a, button, input, textarea, select, [role='button'], [tabindex]):focus-visible {
@@ -100,7 +102,7 @@ body.dialog-open {
 
 @media (max-width: 1024px) {
   :root {
-    --content-padding-inline: 80px;
+    --content-padding-inline: clamp(20px, 5.6vw, 80px);
     --header-offset: 96px;
   }
 
@@ -112,7 +114,7 @@ body.dialog-open {
 
 @media (max-width: 768px) {
   :root {
-    --content-padding-inline: 40px;
+    --content-padding-inline: clamp(16px, 5vw, 40px);
     --header-offset: 88px;
     --anchor-scroll-gap: 16px;
   }
@@ -125,8 +127,15 @@ body.dialog-open {
 
 @media (max-width: 480px) {
   :root {
-    --content-padding-inline: 20px;
+    --content-padding-inline: clamp(12px, 4vw, 20px);
     --header-offset: 80px;
     --anchor-scroll-gap: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    --content-padding-inline: 10px;
+    --header-offset: 74px;
   }
 }
