@@ -177,6 +177,26 @@ span {
     }
 }
 
+@media (max-width: 650px) {
+    .left_part {
+        width: 100%;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-stack {
+        margin: 32px auto 20px;
+    }
+
+    .image-stack .imageAboutMe_background,
+    .image-stack:hover .imageAboutMe_background {
+        opacity: 0;
+        transform: translate(0, 0);
+        transition: none;
+    }
+}
+
 @media (max-width: 480px) {
     section {
         gap: 16px;
