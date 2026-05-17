@@ -12,17 +12,18 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  align-items: flex-start;
   gap: 34px;
   border: 1px solid #3DCFB6;
   border-radius: 30px;
-  padding: 28px;
+  padding: 56px 28px 72px;
   background: linear-gradient(45deg, #1c1c1c 30%, #08453a);
   color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  width: min(1200px);
-  height: min(580px);
+  width: min(1200px, calc(100vw - (var(--content-padding-inline) * 2)));
+  height: auto;
   max-height: calc(100svh - 130px);
-  overflow: auto;
+  overflow: hidden;
   z-index: 1000;
 }
 
@@ -30,11 +31,28 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
+#closeDialog {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 6px;
+  z-index: 3;
+}
+
+#closeDialog,
+.btn_next {
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .dialog-content {
   display: flex;
   flex-direction: column;
   gap: 15px;
   flex: 1;
+  min-width: 0;
 
   h1 {
     font-family: var(--font-sans);
@@ -65,7 +83,7 @@
     color: #ffffff;
     text-align: left;
     margin-bottom: 10px;
-    min-height: 70px;
+    min-height: 0;
   }
 }
 
@@ -88,30 +106,15 @@
   }
 }
 
-.dialog-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
 .preview_image {
-  width: clamp(200px, 34vw, 520px);
+  width: min(520px, 34vw);
+  max-width: 100%;
   height: auto;
-  max-height: 350px;
+  max-height: min(320px, 36svh);
   border-radius: 30px;
   object-fit: cover;
-}
-
-.dialog-actions button {
-  background: transparent;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-
+  aspect-ratio: 16 / 10;
+  display: block;
 }
 
 .close_icon {
@@ -127,6 +130,9 @@
 }
 
 .btn_next{
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
   font-family: var(--font-sans);
   font-size: 18px;
   font-weight: 400;
@@ -215,44 +221,52 @@
 @media (max-width: 1024px) {
   .dialog_wrapper {
     flex-direction: column;
-    top: 84px;
-    width: min(820px, calc(100vw - (var(--content-padding-inline) * 2)));
-    max-height: calc(100svh - 102px);
+    top: 24px;
+    width: min(820px, calc(100vw - 24px));
+    max-height: calc(100svh - 48px);
+    padding: 46px 18px 64px;
     border-radius: 22px;
   }
 
-  .dialog-actions {
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
+  #closeDialog {
+    top: 10px;
+    right: 10px;
   }
 
   .preview_image {
-    width: min(420px, 54vw);
-    max-height: 250px;
+    order: -1;
+    width: min(100%, 460px);
+    max-height: min(230px, 28svh);
     border-radius: 18px;
+  }
+
+  .dialog-content {
+    gap: 10px;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
   .btn_div {
     margin-top: 18px;
     gap: 12px;
   }
+
+  .btn_next {
+    right: 14px;
+    bottom: 10px;
+  }
 }
 
 @media (max-width: 768px) {
   .dialog_wrapper {
-    top: 74px;
-    width: calc(100vw - 24px);
-    max-height: calc(100svh - 88px);
+    top: 8px;
+    width: calc(100vw - 12px);
+    max-height: calc(100svh - 16px);
     border-radius: 18px;
-    padding: 12px;
+    padding: 42px 12px 54px;
     gap: 12px;
-  }
-
-  .dialog-content {
-    gap: 10px;
   }
 
   .icon_container {
@@ -261,15 +275,10 @@
     margin-bottom: 0;
   }
 
-  .dialog-actions {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-
   .preview_image {
-    order: 3;
-    width: 100%;
-    max-height: 220px;
+    width: min(100%, 360px);
+    max-height: min(180px, 24svh);
+    border-radius: 14px;
   }
 
   .btn_next,
@@ -285,13 +294,25 @@
   :host-context(body.language-de) .btn_next {
     min-width: 156px;
   }
+
+  #closeDialog {
+    top: 8px;
+    right: 8px;
+  }
+
+  .btn_next {
+    right: 10px;
+    bottom: 8px;
+  }
 }
 
 @media (max-width: 480px) {
   .dialog_wrapper {
-    width: calc(100vw - 16px);
-    top: 68px;
-    max-height: calc(100svh - 78px);
+    width: calc(100vw - 8px);
+    top: 4px;
+    max-height: calc(100svh - 8px);
+    padding: 38px 10px 48px;
+    border-radius: 16px;
   }
 
   .dialog-content {
@@ -322,6 +343,7 @@
   .btn_div {
     width: 100%;
     gap: 10px;
+    margin-top: 14px;
   }
 
   .btn_github,
@@ -334,12 +356,23 @@
     min-width: 0;
     width: fit-content;
   }
+
+  .preview_image {
+    width: min(100%, 300px);
+    max-height: min(170px, 22svh);
+  }
+
+  .close_icon {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 @media (max-width: 320px) {
   .dialog_wrapper {
-    width: calc(100vw - 10px);
-    padding: 10px;
+    width: calc(100vw - 6px);
+    padding: 34px 8px 44px;
+    border-radius: 14px;
   }
 
   .dialog-content {
@@ -362,5 +395,10 @@
     font-size: 13px;
     height: 40px;
     padding: 8px 10px;
+  }
+
+  .preview_image {
+    width: min(100%, 260px);
+    max-height: min(140px, 20svh);
   }
 }
