@@ -36,7 +36,7 @@ export class App implements AfterViewInit {
     if (!headerElement) {
       return 120;
     }
-    return Math.ceil(headerElement.getBoundingClientRect().height + 16);
+    return Math.ceil(headerElement.getBoundingClientRect().height);
   }
 
   private applyLanguageMetadata(language: AppLanguage): void {
