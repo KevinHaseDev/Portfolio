@@ -60,7 +60,7 @@ section {
         background-color: #26524a;
         display: flex;
         flex-direction: column;
-         transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), opacity 280ms ease;
+        transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), opacity 280ms ease;
 
         &.left,
         &.right {
@@ -72,7 +72,7 @@ section {
             opacity: 1;
             transform: scale(1);
         }
-        
+
         .comment_box_underline {
             margin-top: auto;
             width: 100%;
@@ -182,65 +182,14 @@ section {
 @media (max-width: 768px) {
     section {
 
-        &::before,
+        &::before {
+            left: 0;
+            background: none;
+        }
+
         &::after {
-            width: 80px;
-        }
-
-        h2 {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-
-        .comments_container {
-            width: 100%;
-            justify-content: center;
-        }
-
-        .comment_box {
-            width: 100%;
-            max-width: 640px;
-            padding: 15px;
-            border-radius: 20px;
-            min-height: 240px;
-
-            span {
-                font-size: 16px;
-                margin-left: 20px;
-                margin-right: 20px;
-            }
-
-            .comment_name {
-                margin-bottom: 30px;
-            }
-
-            .comment_text {
-                margin-top: 15px;
-            }
-
-            .comment_box_underline .seperator {
-                margin-left: 30px;
-                margin-bottom: 30px;
-            }
-        }
-
-        button img {
-            width: 20px;
-            height: 20px;
-        }
-    }
-
-    .seperator {
-        margin-left: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    section {
-
-        &::before,
-        &::after {
-            width: 60px;
+            right: 0;
+            background: none;
         }
 
         h2 {
