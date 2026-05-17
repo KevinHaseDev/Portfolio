@@ -8,19 +8,20 @@
 
 .dialog_wrapper {
   position: fixed;
-  top: clamp(72px, 8vh, 120px);
+  top: 120px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: clamp(18px, 2vw, 34px);
+  gap: 34px;
   border: 1px solid #3DCFB6;
   border-radius: 30px;
-  padding: clamp(14px, 2vw, 28px);
+  padding: 28px;
   background: linear-gradient(45deg, #1c1c1c 30%, #08453a);
   color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  width: min(1200px, calc(100vw - (var(--content-padding-inline) * 2)));
-  max-height: calc(100svh - clamp(84px, 10vh, 130px));
+  width: min(1200px);
+  height: min(580px);
+  max-height: calc(100svh - 130px);
   overflow: auto;
   z-index: 1000;
 }
@@ -64,6 +65,7 @@
     color: #ffffff;
     text-align: left;
     margin-bottom: 10px;
+    min-height: 70px;
   }
 }
 
@@ -173,7 +175,6 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  text-decoration: none;
   width: auto;
   min-width: 150px;
   height: 48px;
