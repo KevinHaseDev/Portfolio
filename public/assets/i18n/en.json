@@ -39,7 +39,7 @@
 	"skillSet": {
 		"subtitle": "Technologies",
 		"title": "Skill Set",
-		"description": "I'm a front-end developer with hands-on experience in modern web technologies such as HTML, CSS, JavaScript, TypeScript, and Angular, as well as frameworks and tools that support responsive and dynamic user interfaces. I enjoy building clean, accessible, and performant web applications that deliver great user experiences.\n\nI'm highly adaptable and always eager to learn new technologies, keeping pace with the fast-evolving world of web development. Staying up to date with the latest trends, best practices, and tools is a key part of my workflow. It helps me continuously improve my craft and deliver solutions that meet current industry standards.",
+		"description": "I am a full-stack developer specializing in modern web technologies, with a strong emphasis on clean, high-performance, and user-centered applications. On the front end, I have extensive experience working with HTML, CSS, JavaScript, TypeScript, and Angular, and I develop responsive, accessible, and maintainable user interfaces. On the backend, I rely on Python, Django, and the Django REST Framework to develop robust, scalable, and clearly structured APIs. I place great importance on clean architecture, traceable data flows, and efficient communication between the frontend and backend. I continuously learn new technologies, frameworks, and best practices to keep pace with rapid developments in the web and backend fields.Translated with DeepL.com (free version)",
 		"needAnotherSkillText": "You need another skill?",
 		"contactPrompt": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
 		"talkButton": "Let's talk"
@@ -59,11 +59,26 @@
 				"name": "Join",
 				"description": "Task manager inspired by the Kanban system. Create and organize tasks with drag and drop, assign users, and structure work with categories.",
 				"technologies": [
-					{ "name": "CSS", "icon": "./assets/icons/Projects/CSS.svg" },
-					{ "name": "HTML", "icon": "./assets/icons/Projects/html.svg" },
-					{ "name": "Firebase", "icon": "./assets/icons/Projects/Firebase.svg" },
-					{ "name": "Angular", "icon": "./assets/icons/Projects/Angular.svg" },
-					{ "name": "Typescript", "icon": "./assets/icons/Projects/Typescript.svg" }
+					{
+						"name": "CSS",
+						"icon": "./assets/icons/Projects/CSS.svg"
+					},
+					{
+						"name": "HTML",
+						"icon": "./assets/icons/Projects/html.svg"
+					},
+					{
+						"name": "Firebase",
+						"icon": "./assets/icons/Projects/Firebase.svg"
+					},
+					{
+						"name": "Angular",
+						"icon": "./assets/icons/Projects/Angular.svg"
+					},
+					{
+						"name": "Typescript",
+						"icon": "./assets/icons/Projects/Typescript.svg"
+					}
 				],
 				"actions": {
 					"github": {
@@ -92,9 +107,18 @@
 				"name": "El Pollo Loco",
 				"description": "Jump-and-run game based on an object-oriented approach. Help Pepe collect coins and tabasco to defeat the crazy hen.",
 				"technologies": [
-					{ "name": "CSS", "icon": "./assets/icons/Projects/CSS.svg" },
-					{ "name": "HTML", "icon": "./assets/icons/Projects/html.svg" },
-					{ "name": "Javascript", "icon": "./assets/icons/Projects/Javascript.svg" }
+					{
+						"name": "CSS",
+						"icon": "./assets/icons/Projects/CSS.svg"
+					},
+					{
+						"name": "HTML",
+						"icon": "./assets/icons/Projects/html.svg"
+					},
+					{
+						"name": "Javascript",
+						"icon": "./assets/icons/Projects/Javascript.svg"
+					}
 				],
 				"actions": {
 					"github": {
@@ -123,9 +147,18 @@
 				"name": "PokeDex",
 				"description": "Interactive Pokemon encyclopedia based on an API-driven architecture. Search, filter, and explore Pokemon in real time with data from the PokeAPI.",
 				"technologies": [
-					{ "name": "CSS", "icon": "./assets/icons/Projects/CSS.svg" },
-					{ "name": "HTML", "icon": "./assets/icons/Projects/html.svg" },
-					{ "name": "Javascript", "icon": "./assets/icons/Projects/Javascript.svg" }
+					{
+						"name": "CSS",
+						"icon": "./assets/icons/Projects/CSS.svg"
+					},
+					{
+						"name": "HTML",
+						"icon": "./assets/icons/Projects/html.svg"
+					},
+					{
+						"name": "Javascript",
+						"icon": "./assets/icons/Projects/Javascript.svg"
+					}
 				],
 				"actions": {
 					"github": {
