@@ -12,7 +12,7 @@ type ProjectsContent = {
   dialogQuestion: string;
 };
 
-type ProjectPreviewVariant = 'join' | 'el_pollo_loco' | 'pokedex';
+type ProjectPreviewVariant = 'join' | 'el_pollo_loco' | 'coderr';
 
 type ProjectData = {
   name: string;
@@ -58,11 +58,11 @@ export class Projects {
       previewImage: './assets/img/projects/el_pollo_loco.jpg'
     },
     {
-      name: 'Pokedex',
-      className: 'pokedex last_link',
-      previewVariant: 'pokedex',
-      languages: ['HTML', 'CSS', 'Javascript', 'API'],
-      previewImage: './assets/img/projects/Pokedex_screen.jpg'
+      name: 'Coderr',
+      className: 'coderr last_link',
+      previewVariant: 'coderr',
+      languages: ['DJANGO', 'SQL', 'DRF'],
+      previewImage: './assets/img/projects/Coderr_screen.jpg'
     }
   ];
 

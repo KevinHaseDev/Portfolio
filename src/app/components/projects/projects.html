@@ -6,7 +6,7 @@
         <p>{{ content().sectionLineTwo }}</p>
         <div class="projects_section" [class.join-preview]="activePreviewVariant() === 'join'"
             [class.el-pollo-preview]="activePreviewVariant() === 'el_pollo_loco'"
-            [class.pokedex-preview]="activePreviewVariant() === 'pokedex'">
+            [class.pokedex-preview]="activePreviewVariant() === 'coderr'">
             <div class="projects_box">
                 @for (project of projects; track project.name; let i = $index) {
                 <a [class]="project.className" (mouseenter)="updatePreview(project)" (click)="giveObject(i)">

@@ -144,37 +144,37 @@
 			{
 				"id": "infoDialog",
 				"title": "03",
-				"name": "PokeDex",
+				"name": "Coderr",
 				"description": "Interaktive Pokemon-Enzyklopädie auf API-basierter Architektur. Suche, filtere und entdecke Pokemon in Echtzeit mit Daten aus der PokeAPI.",
 				"technologies": [
 					{
-						"name": "CSS",
-						"icon": "./assets/icons/Projects/CSS.svg"
+						"name": "DJANGO",
+						"icon": "./assets/icons/Projects/DJANGO.svg"
 					},
 					{
-						"name": "HTML",
-						"icon": "./assets/icons/Projects/html.svg"
+						"name": "SQL",
+						"icon": "./assets/icons/Projects/SQL.svg"
 					},
 					{
-						"name": "Javascript",
-						"icon": "./assets/icons/Projects/Javascript.svg"
+						"name": "DRF",
+						"icon": "./assets/icons/Projects/DRF.svg"
 					}
 				],
 				"actions": {
 					"github": {
 						"label": "GitHub",
 						"icon": "./assets/icons/Projects/arrow_outward.svg",
-						"link": "https://github.com/KevinHaseDev/Pokedex.git"
+						"link": "https://github.com/KevinHaseDev/Coderr.git"
 					},
 					"liveTest": {
 						"label": "Live ansehen",
 						"icon": "./assets/icons/Projects/arrow_outward.svg",
-						"link": "https://kevin-hase.developerakademie.net/Pokedex/index.html"
+						"link": "https://coderr.kevin-hase.de/"
 					}
 				},
 				"footer": {
 					"closeLabel": "Schließen",
-					"previewImage": "./assets/img/projects/Pokedex_screen.jpg",
+					"previewImage": "./assets/img/projects/Coderr_screen.jpg",
 					"nextProject": {
 						"label": "Nächstes Projekt",
 						"icon": "./assets/icons/Projects/arrow_forward.svg"
