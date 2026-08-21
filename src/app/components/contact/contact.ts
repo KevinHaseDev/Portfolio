@@ -138,7 +138,7 @@ export class Contact implements OnDestroy {
 
   private async sendContactMessage(): Promise<void> {
     let response = await fetch(
-      'https://formsubmit.co/ajax/hasekevin21@googlemail.com',
+      'https://formsubmit.co/ajax/kevin@kevin-hase.de',
       this.buildRequestOptions()
     );
     if (!response.ok) {
