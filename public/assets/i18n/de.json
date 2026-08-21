@@ -89,7 +89,7 @@
 					"liveTest": {
 						"label": "Live ansehen",
 						"icon": "./assets/icons/Projects/arrow_outward.svg",
-						"link": "https://join-1351.developerakademie.net/index.html"
+						"link": "https://join.kevin-hase.de/"
 					}
 				},
 				"footer": {
@@ -129,7 +129,7 @@
 					"liveTest": {
 						"label": "Live ansehen",
 						"icon": "./assets/icons/Projects/arrow_outward.svg",
-						"link": "https://kevin-hase.developerakademie.net/El%20Pollo%20Loco/index.html"
+						"link": "https://el-pollo-loco.kevin-hase.de/"
 					}
 				},
 				"footer": {
@@ -145,7 +145,7 @@
 				"id": "infoDialog",
 				"title": "03",
 				"name": "Coderr",
-				"description": "Interaktive Pokemon-Enzyklopädie auf API-basierter Architektur. Suche, filtere und entdecke Pokemon in Echtzeit mit Daten aus der PokeAPI.",
+				"description": "Marktplatz für Entwickler-Dienstleistungen. Angebote erstellen, Bestellungen abwickeln, Anbieter bewerten.",
 				"technologies": [
 					{
 						"name": "DJANGO",
@@ -175,6 +175,54 @@
 				"footer": {
 					"closeLabel": "Schließen",
 					"previewImage": "./assets/img/projects/Coderr_screen.jpg",
+					"nextProject": {
+						"label": "Nächstes Projekt",
+						"icon": "./assets/icons/Projects/arrow_forward.svg"
+					}
+				}
+			},
+			{
+				"id": "infoDialog",
+				"title": "04",
+				"name": "Videoflix",
+				"description": "Videostreaming-Plattform. Videos hochladen und in mehreren Auflösungen ansehen. Adaptive Wiedergabe über HLS.",
+				"technologies": [
+					{
+						"name": "DJANGO",
+						"icon": "./assets/icons/Projects/DJANGO.svg"
+					},
+					{
+						"name": "DRF",
+						"icon": "./assets/icons/Projects/DRF.svg"
+					},
+					{
+						"name": "SQL",
+						"icon": "./assets/icons/Projects/SQL.svg"
+					},
+					{
+						"name": "Redis",
+						"icon": "./assets/icons/Projects/Redis.svg"
+					},
+					{
+						"name": "Docker",
+						"icon": "./assets/icons/Projects/Docker.svg"
+					}
+				],
+				"actions": {
+					"github": {
+						"label": "GitHub",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://github.com/KevinHaseDev/Videoflix.git"
+					},
+					"liveTest": {
+						"label": "Live ansehen",
+						"icon": "./assets/icons/Projects/arrow_outward.svg",
+						"link": "https://videoflix.kevin-hase.de/"
+					}
+				},
+				"footer": {
+					"closeLabel": "Schließen",
+					"previewImage": "./assets/img/projects/videoflix.jpg",
 					"nextProject": {
 						"label": "Nächstes Projekt",
 						"icon": "./assets/icons/Projects/arrow_forward.svg"

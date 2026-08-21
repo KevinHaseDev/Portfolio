@@ -12,7 +12,7 @@ type ProjectsContent = {
   dialogQuestion: string;
 };
 
-type ProjectPreviewVariant = 'join' | 'el_pollo_loco' | 'coderr';
+type ProjectPreviewVariant = 'join' | 'el_pollo_loco' | 'coderr' | 'videoflix';
 
 type ProjectData = {
   name: string;
@@ -59,10 +59,17 @@ export class Projects {
     },
     {
       name: 'Coderr',
-      className: 'coderr last_link',
+      className: 'coderr',
       previewVariant: 'coderr',
       languages: ['DJANGO', 'SQL', 'DRF'],
       previewImage: './assets/img/projects/Coderr_screen.jpg'
+    },
+    {
+      name: 'Videoflix',
+      className: 'videoflix last_link',
+      previewVariant: 'videoflix',
+      languages: ['DJANGO', 'DRF', 'SQL', 'Redis', 'Docker'],
+      previewImage: './assets/img/projects/videoflix.jpg'
     }
   ];
 

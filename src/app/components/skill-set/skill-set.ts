@@ -69,6 +69,30 @@ export class SkillSet {
     icon: './assets/icons/Skills/SQL_icon.svg'
   },
   {
+    name: 'Cloud',
+    icon: './assets/icons/Skills/cloud_icon.svg'
+  },
+  {
+    name: 'Docker',
+    icon: './assets/icons/Skills/docker_icon.svg'
+  },
+  {
+    name: 'linux',
+    icon: './assets/icons/Skills/linux_icon.svg'
+  },
+  {
+    name: 'PostgreSQL',
+    icon: './assets/icons/Skills/postgreSQL_icon.svg'
+  },
+  {
+    name: 'Redis',
+    icon: './assets/icons/Skills/redis_icon.svg'
+  },
+  {
+    name: 'Scrum',
+    icon: './assets/icons/Skills/scrum_icon.svg'
+  },
+  {
     name: 'Growth Mindset',
     icon: './assets/icons/Skills/mindset_icon.svg'
   }
