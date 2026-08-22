@@ -236,6 +236,7 @@ section {
     a {
         position: relative;
         text-decoration: none;
+        white-space: nowrap;
 
         &:hover {
             color: #35d0b2;
